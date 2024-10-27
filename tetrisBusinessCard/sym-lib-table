@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "RP2040")(type "KiCad")(uri "C:/Users/joshs/OneDrive/Documents/tetrisBusinessCard/Footprints and libraries/SC0914_13_/KiCADv6/2024-03-08_01-47-34.kicad_sym")(options "")(descr ""))
+  (lib (name "W25Q16JVUXIQ")(type "KiCad")(uri "C:/Users/joshs/OneDrive/Documents/tetrisBusinessCard/Footprints and libraries/ul_W25Q16JVUXIQ/KiCADv6/2024-03-08_02-31-24.kicad_sym")(options "")(descr ""))
+)
