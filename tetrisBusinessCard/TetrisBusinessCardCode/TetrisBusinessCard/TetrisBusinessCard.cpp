@@ -9,10 +9,6 @@ const uint32_t GPIOMask =  0x2FFFFFF;
 
 
 int main() {
-    stdio_init_all();
-
-    //turn on all pins needed
-    gpio_init_mask(GPIOMask);
 
     uint32_t LEDTargetBit = 0b1;
     uint32_t targetMask;
