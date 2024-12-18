@@ -1211,6 +1211,106 @@
 				)
 			)
 		)
+		(symbol "MySymbols:CapacitiveTouch"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "CapacitiveTouch_0_1"
+				(rectangle
+					(start -2.54 8.89)
+					(end 3.81 3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type color)
+						(color 255 218 97 0.8)
+					)
+				)
+			)
+			(symbol "CapacitiveTouch_1_1"
+				(pin input line
+					(at 2.54 1.27 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -1.27 1.27 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "RP2040:SC091413"
 			(pin_names
 				(offset 0.254)
@@ -3298,126 +3398,6 @@
 				)
 			)
 		)
-		(symbol "power:+3V3"
-			(power)
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3V3"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers hide)
@@ -5340,12 +5320,6 @@
 		(uuid "5752c5cc-c912-4424-95c5-264d54d59cae")
 	)
 	(junction
-		(at 594.36 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "576232e9-49b2-46be-b7ee-068b1ab9a96c")
-	)
-	(junction
 		(at 989.33 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5494,6 +5468,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "60dd0252-410c-443d-97bf-1eb1ba34cf39")
+	)
+	(junction
+		(at 591.82 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60e1f58b-ce8e-45a7-a601-fa4056c37a62")
 	)
 	(junction
 		(at 835.66 250.19)
@@ -12125,6 +12105,16 @@
 	)
 	(wire
 		(pts
+			(xy 558.8 168.91) (xy 557.53 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e968763-6ddf-4e5d-9aa8-274ea1ff8283")
+	)
+	(wire
+		(pts
 			(xy 887.73 273.05) (xy 890.27 273.05)
 		)
 		(stroke
@@ -12142,6 +12132,16 @@
 			(type dot)
 		)
 		(uuid "1f16a2b8-6714-469d-af67-c2a02b61ee39")
+	)
+	(wire
+		(pts
+			(xy 523.24 276.86) (xy 528.32 276.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f1ff287-a3e1-4799-8edb-a3bde26d98c7")
 	)
 	(wire
 		(pts
@@ -14985,7 +14985,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 276.86) (xy 516.89 276.86)
+			(xy 509.27 276.86) (xy 519.43 276.86)
 		)
 		(stroke
 			(width 0)
@@ -16485,6 +16485,16 @@
 	)
 	(wire
 		(pts
+			(xy 523.24 237.49) (xy 528.32 237.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48d9a516-e3f2-4c18-8d41-ed7b7fb684f8")
+	)
+	(wire
+		(pts
 			(xy 845.82 101.6) (xy 848.36 101.6)
 		)
 		(stroke
@@ -16652,6 +16662,16 @@
 			(type default)
 		)
 		(uuid "4ae828eb-cdcc-4fe5-93ec-9dd95a60e181")
+	)
+	(wire
+		(pts
+			(xy 591.82 93.98) (xy 591.82 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ae9f9cf-148b-4cbb-9fed-c002f3f7e5e7")
 	)
 	(wire
 		(pts
@@ -21765,6 +21785,16 @@
 	)
 	(wire
 		(pts
+			(xy 591.82 92.71) (xy 600.71 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e61a6f4-c29c-4958-ada8-422fca7e5263")
+	)
+	(wire
+		(pts
 			(xy 904.24 59.69) (xy 890.27 59.69)
 		)
 		(stroke
@@ -22685,6 +22715,16 @@
 	)
 	(wire
 		(pts
+			(xy 523.24 246.38) (xy 528.32 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88c2e5ba-3f90-47ee-a0b9-c77b8c0a1250")
+	)
+	(wire
+		(pts
 			(xy 961.39 67.31) (xy 963.93 67.31)
 		)
 		(stroke
@@ -23135,7 +23175,7 @@
 	)
 	(wire
 		(pts
-			(xy 577.85 92.71) (xy 594.36 92.71)
+			(xy 577.85 92.71) (xy 591.82 92.71)
 		)
 		(stroke
 			(width 0)
@@ -25845,7 +25885,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 227.33) (xy 516.89 227.33)
+			(xy 509.27 227.33) (xy 519.43 227.33)
 		)
 		(stroke
 			(width 0)
@@ -26815,7 +26855,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 266.7) (xy 516.89 266.7)
+			(xy 509.27 266.7) (xy 519.43 266.7)
 		)
 		(stroke
 			(width 0)
@@ -28105,7 +28145,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 246.38) (xy 516.89 246.38)
+			(xy 509.27 246.38) (xy 519.43 246.38)
 		)
 		(stroke
 			(width 0)
@@ -28562,6 +28602,16 @@
 			(type default)
 		)
 		(uuid "c5dc0459-e340-46ba-86b6-cd192093e392")
+	)
+	(wire
+		(pts
+			(xy 523.24 227.33) (xy 528.32 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5efdeeb-7729-443c-9057-686378524053")
 	)
 	(wire
 		(pts
@@ -30015,6 +30065,16 @@
 	)
 	(wire
 		(pts
+			(xy 523.24 266.7) (xy 528.32 266.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3a59ec3-68b3-44f3-846e-2606297de950")
+	)
+	(wire
+		(pts
 			(xy 946.15 215.9) (xy 946.15 208.28)
 		)
 		(stroke
@@ -30135,7 +30195,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 237.49) (xy 516.89 237.49)
+			(xy 509.27 237.49) (xy 519.43 237.49)
 		)
 		(stroke
 			(width 0)
@@ -32325,7 +32385,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 256.54) (xy 516.89 256.54)
+			(xy 509.27 256.54) (xy 519.43 256.54)
 		)
 		(stroke
 			(width 0)
@@ -32712,6 +32772,16 @@
 			(type default)
 		)
 		(uuid "ee3ce151-abe5-4622-a6ca-8b5af0c36e2e")
+	)
+	(wire
+		(pts
+			(xy 523.24 256.54) (xy 528.32 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee4e5f0e-ba72-4aa7-8fb0-49c0bc71de1f")
 	)
 	(wire
 		(pts
@@ -33232,16 +33302,6 @@
 			(type dot)
 		)
 		(uuid "f4082e93-40a7-4667-b41c-72087a84cbc4")
-	)
-	(wire
-		(pts
-			(xy 594.36 92.71) (xy 600.71 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f40b3134-8037-413a-91d5-3179fcebb04b")
 	)
 	(wire
 		(pts
@@ -35474,6 +35534,28 @@
 			)
 		)
 	)
+	(global_label "BTN_DATA_OUT"
+		(shape output)
+		(at 528.32 276.86 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "620c3858-8223-47bd-b493-cca48ae886ce")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 544.8519 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "CHRLY_16"
 		(shape output)
 		(at 494.03 168.91 180)
@@ -35604,6 +35686,28 @@
 			)
 		)
 	)
+	(global_label "BTN_DATA_OUT"
+		(shape output)
+		(at 528.32 227.33 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7343c68f-dc51-4e46-a0e6-8d19cf585c33")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 544.8519 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "CHRLY_22"
 		(shape output)
 		(at 558.8 189.23 0)
@@ -35622,6 +35726,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT +"
+		(shape input)
+		(at 591.82 93.98 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "77ecb769-23a6-471f-839e-f0f70a4725b7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 591.82 103.799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -36151,6 +36277,28 @@
 			)
 		)
 	)
+	(global_label "BTN_DATA_OUT"
+		(shape output)
+		(at 528.32 266.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b357fdd6-aa8b-4ffb-907d-51f25cf91a33")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 544.8519 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "CHRLY_14"
 		(shape input)
 		(at 740.41 185.42 180)
@@ -36213,6 +36361,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BTN_DATA_OUT"
+		(shape output)
+		(at 528.32 237.49 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c5bb9fce-672f-4586-afb0-6d7e292c266c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 544.8519 237.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -36388,6 +36558,50 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BTN_DATA_OUT"
+		(shape output)
+		(at 558.8 168.91 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dc3f0e7a-b3e5-487f-abcb-cc82e4eb5e67")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 575.3319 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BTN_DATA_OUT"
+		(shape output)
+		(at 528.32 256.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dc89a165-95a9-4835-842f-54364463292c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 544.8519 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -36586,6 +36800,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BTN_DATA_OUT"
+		(shape output)
+		(at 528.32 246.38 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e97bfd35-6d32-441f-88eb-b4539bb30732")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 544.8519 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -42142,74 +42378,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 521.97 266.7 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1cd07a15-e9c3-49e7-8480-36629dd48fa5")
-		(property "Reference" "SW5"
-			(at 521.97 259.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 521.97 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 521.97 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 521.97 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 521.97 266.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "849841ec-e7ac-474d-8b6f-ef1870a05972")
-		)
-		(pin "2"
-			(uuid "096f2b4b-a02a-460b-9527-013644914367")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "SW5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 911.86 67.31 0)
 		(unit 1)
@@ -43701,6 +43869,77 @@
 		)
 	)
 	(symbol
+		(lib_id "MySymbols:CapacitiveTouch")
+		(at 520.7 247.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2c81db85-2854-4b14-b104-d75575a99d7e")
+		(property "Reference" "U6"
+			(at 525.78 240.6649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 525.78 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 520.7 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 520.7 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 520.7 247.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "60b779f0-ee95-41bd-b405-6d7b13495ac7")
+		)
+		(pin "1"
+			(uuid "4d5223b4-703f-44d1-ab60-0856aa1de8be")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 981.71 250.19 0)
 		(unit 1)
@@ -43899,73 +44138,6 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D142")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 527.05 256.54 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2e64252a-037a-4199-839a-e97c69417bf4")
-		(property "Reference" "#PWR020"
-			(at 533.4 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 530.86 256.5399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 527.05 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 527.05 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 527.05 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "124c965e-4078-408e-aa22-d4e7d9754138")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -45942,73 +46114,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 527.05 246.38 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3be1c1a0-26a3-4e4c-ab00-d1e8efce9c40")
-		(property "Reference" "#PWR019"
-			(at 533.4 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 530.86 246.3799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 527.05 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 527.05 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 527.05 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5b918cb9-4e5a-44d1-a948-6ce4ebfbddcf")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 953.77 250.19 0)
 		(unit 1)
@@ -46206,73 +46311,6 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D294")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 527.05 276.86 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3da842fb-d2c9-4c0f-823d-5143fdcc9a8d")
-		(property "Reference" "#PWR022"
-			(at 533.4 276.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 530.86 276.8599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 527.05 276.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 527.05 276.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 527.05 276.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e0c32dce-faae-42f9-8b5b-1101a3426aff")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -48853,73 +48891,6 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D174")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 527.05 266.7 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "51b8b6ed-e3f8-4144-8f52-885a176fdea0")
-		(property "Reference" "#PWR021"
-			(at 533.4 266.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 530.86 266.6999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 527.05 266.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 527.05 266.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 527.05 266.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9407e07d-9044-486e-98b2-8ebbe4e0a2dd")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -55715,74 +55686,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 521.97 227.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "81cd5ab3-f09f-4e33-bed8-e451ffd1563c")
-		(property "Reference" "SW1"
-			(at 521.97 219.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 521.97 222.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 521.97 222.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 521.97 222.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 521.97 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f01414a3-5c48-4d0f-b934-6cac8ebf092a")
-		)
-		(pin "2"
-			(uuid "82a28254-f517-48d5-877b-42ae228deabd")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 1009.65 124.46 0)
 		(unit 1)
@@ -56117,6 +56020,77 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D242")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MySymbols:CapacitiveTouch")
+		(at 520.7 238.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "84f7773b-219e-4c18-bbbd-ec40d99e7228")
+		(property "Reference" "U5"
+			(at 525.78 231.7749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 525.78 233.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 520.7 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 520.7 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 520.7 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "89147cb8-4461-48dc-90be-2f1e58400eb1")
+		)
+		(pin "1"
+			(uuid "7f10b9f5-00c9-4478-918c-1ad2bd5b5e89")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -56591,6 +56565,77 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D408")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MySymbols:CapacitiveTouch")
+		(at 520.7 257.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "87c03bff-c420-4c62-b974-703522fbfd0d")
+		(property "Reference" "U7"
+			(at 525.78 250.8249 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 525.78 252.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 520.7 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 520.7 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 520.7 257.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "866dace6-abe8-4275-907f-8e1883cb54b9")
+		)
+		(pin "1"
+			(uuid "68240f8e-764a-4280-b4f4-cd5fa2f482a7")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -58158,74 +58203,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 521.97 246.38 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "93838377-ded7-407f-9358-d68e2de13583")
-		(property "Reference" "SW3"
-			(at 521.97 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 521.97 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 521.97 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 521.97 241.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 521.97 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ffbb68e0-24f7-4d44-991f-fdd380e9750b")
-		)
-		(pin "2"
-			(uuid "5664c749-4b74-45d4-86dd-7b7b6680ea45")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 925.83 113.03 0)
 		(unit 1)
@@ -59314,74 +59291,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 521.97 237.49 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d769ce2-1f87-45f6-9a75-6500f1f69e41")
-		(property "Reference" "SW2"
-			(at 521.97 229.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 521.97 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 521.97 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 521.97 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 521.97 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "baf67d30-6cf6-4c52-837a-11c784bbbc27")
-		)
-		(pin "2"
-			(uuid "7b453ba0-38f8-4ca6-87f4-761f7a3c6447")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 855.98 250.19 0)
 		(unit 1)
@@ -59790,74 +59699,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 521.97 256.54 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a04537c4-0adf-4e79-a1ed-e46fda428f8e")
-		(property "Reference" "SW4"
-			(at 521.97 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 521.97 251.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 521.97 251.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 521.97 251.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 521.97 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "39112e4e-4a89-4ddf-88c8-5def964418c5")
-		)
-		(pin "2"
-			(uuid "f3671c7b-dbaf-46a1-9f5c-75962167a8f0")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "SW4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 828.04 55.88 0)
 		(unit 1)
@@ -59920,6 +59761,77 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MySymbols:CapacitiveTouch")
+		(at 520.7 267.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a124e848-c4c3-4d55-a93e-dfe06696acf5")
+		(property "Reference" "U8"
+			(at 525.78 260.9849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 525.78 262.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 520.7 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 520.7 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 520.7 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "8de8e1a3-cbd5-4ed6-8bd4-c35f60ed255a")
+		)
+		(pin "1"
+			(uuid "0e788857-c6b7-497c-9512-1d91d937a9c4")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -60056,73 +59968,6 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D170")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 527.05 237.49 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a2b8c088-0cbc-4b66-b8bf-417dab42040e")
-		(property "Reference" "#PWR018"
-			(at 533.4 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 530.86 237.4899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 527.05 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 527.05 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 527.05 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6f779e29-74dc-46d6-98f8-022e102f4475")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -62498,6 +62343,77 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D313")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MySymbols:CapacitiveTouch")
+		(at 520.7 228.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b6609a2a-86e5-4a85-a2da-7ef23b358f38")
+		(property "Reference" "U4"
+			(at 525.78 221.6149 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 525.78 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 520.7 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 520.7 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 520.7 228.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "89967145-1fc0-468a-92f5-b2e8e8bfdb5e")
+		)
+		(pin "1"
+			(uuid "289b4816-0ba1-45db-a247-11410de8d969")
+		)
+		(instances
+			(project ""
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -65084,73 +65000,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 527.05 227.33 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cb26c897-5b6d-409e-9e7d-a897c52fde05")
-		(property "Reference" "#PWR017"
-			(at 533.4 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 530.86 227.3299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 527.05 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 527.05 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 527.05 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "36dc655e-b024-4a97-b7d2-325967f020da")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 562.61 153.67 270)
 		(mirror x)
@@ -65959,72 +65808,6 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D386")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 594.36 92.71 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d37c5bc2-db1a-45f6-9b25-112e3ef8d51d")
-		(property "Reference" "#PWR016"
-			(at 594.36 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 594.36 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 594.36 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 594.36 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 594.36 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "77f6b66e-e5e3-47c0-8b47-1ffec05c756c")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -67668,6 +67451,77 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MySymbols:CapacitiveTouch")
+		(at 520.7 278.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de96c20b-02d4-4338-8027-d1b290ffc1e2")
+		(property "Reference" "U9"
+			(at 525.78 271.1449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "~"
+			(at 525.78 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 520.7 278.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 520.7 278.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 520.7 278.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "16a55af6-8fc3-4c14-aac7-cfe28f517d57")
+		)
+		(pin "1"
+			(uuid "d19c2ac6-449f-46dc-b145-89c1696fd31e")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -69362,74 +69216,6 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 521.97 276.86 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e6d1e94f-8146-48a5-8477-327a18706324")
-		(property "Reference" "SW6"
-			(at 521.97 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 521.97 271.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_SMD:SW_SPST_B3U-1000P"
-			(at 521.97 271.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 521.97 271.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 521.97 276.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "05f4a185-cc1a-40c7-83e6-b6cbf081c07f")
-		)
-		(pin "2"
-			(uuid "1b74b300-6e2c-4d77-8670-8fc0637180e9")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "SW6")
 					(unit 1)
 				)
 			)
