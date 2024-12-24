@@ -1,4 +1,4 @@
-23642088853788407
+23647292619903734
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -67234,6 +67234,27 @@ CapacitiveTouchpoint
 0
 2
 2
+MyFootprints
+LED_0603_1608MetricAdjusted
+LED SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+LED
+0
+2
+2
+MyFootprints
+PogoConnector
+
+
+0
+6
+6
+MyFootprints
+SW_PTS647SM38SMTR2LFS_CNK
+
+PTS647SM38SMTR2LFS 
+0
+4
+4
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads

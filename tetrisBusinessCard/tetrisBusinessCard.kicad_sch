@@ -1211,12 +1211,12 @@
 				)
 			)
 		)
-		(symbol "MySymbols:CapacitiveTouch"
+		(symbol "MySymbols:PogoConnector"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 0 0 0)
+			(property "Reference" "PogoConnector"
+				(at 0.254 7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1258,32 +1258,32 @@
 					(hide yes)
 				)
 			)
-			(symbol "CapacitiveTouch_0_1"
+			(symbol "PogoConnector_0_1"
 				(rectangle
-					(start -2.54 8.89)
-					(end 3.81 3.81)
+					(start -6.35 6.35)
+					(end 6.35 0)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
 						(type color)
-						(color 255 218 97 0.8)
+						(color 255 199 92 1)
 					)
 				)
 			)
-			(symbol "CapacitiveTouch_1_1"
+			(symbol "PogoConnector_1_1"
 				(pin input line
-					(at 2.54 1.27 90)
+					(at -6.35 -2.54 90)
 					(length 2.54)
-					(name ""
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1291,17 +1291,89 @@
 						)
 					)
 				)
-				(pin output line
-					(at -1.27 1.27 90)
+				(pin input line
+					(at -3.81 -2.54 90)
 					(length 2.54)
-					(name ""
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -1.27 -2.54 90)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 1.27 -2.54 90)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 3.81 -2.54 90)
+					(length 2.54)
+					(name "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 6.35 -2.54 90)
+					(length 2.54)
+					(name "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3796,6 +3868,12 @@
 		(uuid "0a802e7e-2afb-446e-9a2b-01b01da68af1")
 	)
 	(junction
+		(at 636.27 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0aae70cb-175a-4137-900b-0779a9acc8e1")
+	)
+	(junction
 		(at 975.36 193.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4150,6 +4228,12 @@
 		(uuid "1c5d617c-d512-4c3a-a2ed-6f51fbe3729b")
 	)
 	(junction
+		(at 514.35 264.16)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1c6f795f-f380-4ced-b594-238938da2682")
+	)
+	(junction
 		(at 989.33 193.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4250,6 +4334,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "23face88-7cec-48e9-86ce-b1ac5fdaea65")
+	)
+	(junction
+		(at 514.35 276.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "244456a7-974a-4b5b-ba26-472770b090d8")
 	)
 	(junction
 		(at 933.45 147.32)
@@ -6754,6 +6844,12 @@
 		(uuid "93d75e79-5d82-4bed-8dbd-7336aa1d02aa")
 	)
 	(junction
+		(at 514.35 289.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "947dd01d-250e-43d3-8f0e-7a3960a47746")
+	)
+	(junction
 		(at 1071.88 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7048,6 +7144,12 @@
 		(uuid "a5adc985-7567-40b1-add7-3d0757a4e9c8")
 	)
 	(junction
+		(at 514.35 251.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5e56cae-e049-4571-92c7-12f1c2be89d1")
+	)
+	(junction
 		(at 1057.91 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7288,6 +7390,12 @@
 		(uuid "b1f33d65-71cd-4199-9265-b682f4f6e80c")
 	)
 	(junction
+		(at 636.27 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b20fa5c1-67f1-4175-9d16-75b47fc46dfd")
+	)
+	(junction
 		(at 891.54 147.32)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7460,6 +7568,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ba8d4859-705f-43ee-acd8-7be78884a917")
+	)
+	(junction
+		(at 514.35 240.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bac25a60-634b-4945-8c1b-8d7060113f93")
 	)
 	(junction
 		(at 1057.91 93.98)
@@ -8198,6 +8312,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d97554b0-e837-4deb-b7cd-08745106ddd6")
+	)
+	(junction
+		(at 514.35 227.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9b3ba04-1a00-4733-8516-73a38b161ce3")
 	)
 	(junction
 		(at 1057.91 71.12)
@@ -9075,16 +9195,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 153.67) (xy 496.57 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00381afd-cfdc-442f-8e61-cff74cc998e5")
-	)
-	(wire
-		(pts
 			(xy 946.15 90.17) (xy 946.15 82.55)
 		)
 		(stroke
@@ -9335,16 +9445,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 194.31) (xy 496.57 194.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0373c823-6ddd-4862-b625-25792bf39471")
-	)
-	(wire
-		(pts
 			(xy 989.33 238.76) (xy 989.33 250.19)
 		)
 		(stroke
@@ -9532,16 +9632,6 @@
 			(type default)
 		)
 		(uuid "04c7a856-ae79-4eab-92ba-5b1b232dbc87")
-	)
-	(wire
-		(pts
-			(xy 494.03 151.13) (xy 496.57 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04ce9682-fa77-40df-a3d8-6e11fe73ee0f")
 	)
 	(wire
 		(pts
@@ -9905,6 +9995,16 @@
 	)
 	(wire
 		(pts
+			(xy 557.53 194.31) (xy 560.07 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "077ec2e9-c736-4455-aec6-cb357eb1a2e6")
+	)
+	(wire
+		(pts
 			(xy 862.33 196.85) (xy 848.36 196.85)
 		)
 		(stroke
@@ -9952,6 +10052,16 @@
 			(type default)
 		)
 		(uuid "083a631a-6735-4187-9b7f-5b671ad7090a")
+	)
+	(wire
+		(pts
+			(xy 636.27 153.67) (xy 636.27 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "083cf50d-cd93-488c-ae61-d4716ba9cc9a")
 	)
 	(wire
 		(pts
@@ -10452,6 +10562,16 @@
 			(type default)
 		)
 		(uuid "0cb4884a-27ce-4ce6-a68a-38832fc1f1fc")
+	)
+	(wire
+		(pts
+			(xy 494.03 156.21) (xy 496.57 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cc36a86-192d-4d89-9d46-e5f141200997")
 	)
 	(wire
 		(pts
@@ -10975,6 +11095,16 @@
 	)
 	(wire
 		(pts
+			(xy 514.35 276.86) (xy 519.43 276.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1319acca-6db6-4f24-8b4c-ee28aaef25e5")
+	)
+	(wire
+		(pts
 			(xy 873.76 158.75) (xy 876.3 158.75)
 		)
 		(stroke
@@ -11065,7 +11195,7 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 176.53) (xy 558.8 176.53)
+			(xy 557.53 171.45) (xy 560.07 171.45)
 		)
 		(stroke
 			(width 0)
@@ -11565,6 +11695,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 140.97) (xy 496.57 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "182e7acc-94c4-4292-846c-fdc13d8cf90b")
+	)
+	(wire
+		(pts
 			(xy 1003.3 170.18) (xy 1003.3 181.61)
 		)
 		(stroke
@@ -11702,6 +11842,16 @@
 			(type default)
 		)
 		(uuid "19fc6948-6f7c-44a3-aacc-20cebe9db018")
+	)
+	(wire
+		(pts
+			(xy 478.79 217.17) (xy 478.79 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19fcf383-b7c2-4ab2-a8ac-876f6b46ff9c")
 	)
 	(wire
 		(pts
@@ -11862,16 +12012,6 @@
 			(type default)
 		)
 		(uuid "1b963bf2-b455-4ab4-b102-94f0ae4215a5")
-	)
-	(wire
-		(pts
-			(xy 494.03 138.43) (xy 496.57 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b9e2d3c-e2b9-49a3-a233-76d31982c602")
 	)
 	(wire
 		(pts
@@ -12105,16 +12245,6 @@
 	)
 	(wire
 		(pts
-			(xy 558.8 168.91) (xy 557.53 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e968763-6ddf-4e5d-9aa8-274ea1ff8283")
-	)
-	(wire
-		(pts
 			(xy 887.73 273.05) (xy 890.27 273.05)
 		)
 		(stroke
@@ -12132,16 +12262,6 @@
 			(type dot)
 		)
 		(uuid "1f16a2b8-6714-469d-af67-c2a02b61ee39")
-	)
-	(wire
-		(pts
-			(xy 523.24 276.86) (xy 528.32 276.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f1ff287-a3e1-4799-8edb-a3bde26d98c7")
 	)
 	(wire
 		(pts
@@ -12242,6 +12362,16 @@
 			(type default)
 		)
 		(uuid "1fd6f5d9-17a2-4a75-b1fd-cfa50fd2cdf9")
+	)
+	(wire
+		(pts
+			(xy 494.03 133.35) (xy 496.57 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fd87900-4734-4776-a185-e269be4c2983")
 	)
 	(wire
 		(pts
@@ -13625,6 +13755,16 @@
 	)
 	(wire
 		(pts
+			(xy 514.35 251.46) (xy 519.43 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d13cb30-d4d3-4685-97c2-078649e55610")
+	)
+	(wire
+		(pts
 			(xy 477.52 125.73) (xy 477.52 140.97)
 		)
 		(stroke
@@ -13642,16 +13782,6 @@
 			(type dot)
 		)
 		(uuid "2d3f3a3d-4194-4189-bc55-353703f1acbb")
-	)
-	(wire
-		(pts
-			(xy 494.03 168.91) (xy 496.57 168.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d4a6d1d-c608-43fd-b9c6-59a197af6bd1")
 	)
 	(wire
 		(pts
@@ -13732,16 +13862,6 @@
 			(type dot)
 		)
 		(uuid "2e186e05-1420-42fc-b3ff-19a0881d17b3")
-	)
-	(wire
-		(pts
-			(xy 494.03 161.29) (xy 496.57 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e1a21dd-6ac7-4810-80f0-caa107dfb45f")
 	)
 	(wire
 		(pts
@@ -14082,6 +14202,16 @@
 			(type default)
 		)
 		(uuid "30ee76ad-277d-4d7a-9c70-acd67262b09a")
+	)
+	(wire
+		(pts
+			(xy 494.03 138.43) (xy 496.57 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30f5a140-0965-4a21-8f32-e491a07a46b1")
 	)
 	(wire
 		(pts
@@ -14795,6 +14925,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 194.31) (xy 496.57 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "378c494b-c5ca-4c3b-a92b-f088d9c257b9")
+	)
+	(wire
+		(pts
 			(xy 1043.94 261.62) (xy 1043.94 254)
 		)
 		(stroke
@@ -14982,16 +15122,6 @@
 			(type dot)
 		)
 		(uuid "39a85f0c-9831-498e-a451-5f28e08bf4f3")
-	)
-	(wire
-		(pts
-			(xy 509.27 276.86) (xy 519.43 276.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39c18dca-25cd-41ba-9439-cd583660f19f")
 	)
 	(wire
 		(pts
@@ -15235,16 +15365,6 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 173.99) (xy 558.8 173.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c7a8ab4-d0ab-4825-b3f6-79e7c559c847")
-	)
-	(wire
-		(pts
 			(xy 876.3 238.76) (xy 876.3 231.14)
 		)
 		(stroke
@@ -15372,6 +15492,16 @@
 			(type dot)
 		)
 		(uuid "3db9595a-4cf0-4709-a2d8-d6dcb3859a44")
+	)
+	(wire
+		(pts
+			(xy 514.35 285.75) (xy 514.35 284.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3dde56a9-0407-47d8-b46b-ccbe2f750fbf")
 	)
 	(wire
 		(pts
@@ -15835,6 +15965,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 135.89) (xy 496.57 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "422a75cb-0978-4f9b-9187-0488edcf3f13")
+	)
+	(wire
+		(pts
 			(xy 1043.94 276.86) (xy 1029.97 276.86)
 		)
 		(stroke
@@ -16112,6 +16252,16 @@
 			(type default)
 		)
 		(uuid "459324fd-5e26-49e1-8f12-e1231d64c2bd")
+	)
+	(wire
+		(pts
+			(xy 494.03 166.37) (xy 496.57 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45c5c883-7a18-4c55-b8c8-2912907abd08")
 	)
 	(wire
 		(pts
@@ -16425,16 +16575,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 130.81) (xy 496.57 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4802e642-4385-4090-ad4b-72b9ec8a3c19")
-	)
-	(wire
-		(pts
 			(xy 963.93 227.33) (xy 965.2 227.33)
 		)
 		(stroke
@@ -16485,7 +16625,7 @@
 	)
 	(wire
 		(pts
-			(xy 523.24 237.49) (xy 528.32 237.49)
+			(xy 529.59 240.03) (xy 534.67 240.03)
 		)
 		(stroke
 			(width 0)
@@ -16735,7 +16875,7 @@
 	)
 	(wire
 		(pts
-			(xy 607.06 152.4) (xy 643.89 152.4)
+			(xy 607.06 152.4) (xy 636.27 152.4)
 		)
 		(stroke
 			(width 0)
@@ -17225,16 +17365,6 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 196.85) (xy 558.8 196.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5028615b-d6b6-42f3-800b-713ec829d567")
-	)
-	(wire
-		(pts
 			(xy 1055.37 204.47) (xy 1057.91 204.47)
 		)
 		(stroke
@@ -17635,6 +17765,16 @@
 	)
 	(wire
 		(pts
+			(xy 557.53 168.91) (xy 560.07 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53af5604-4ecf-44cf-b5e0-a9a07de4c775")
+	)
+	(wire
+		(pts
 			(xy 932.18 162.56) (xy 918.21 162.56)
 		)
 		(stroke
@@ -17935,7 +18075,7 @@
 	)
 	(wire
 		(pts
-			(xy 608.33 149.86) (xy 643.89 149.86)
+			(xy 608.33 149.86) (xy 636.27 149.86)
 		)
 		(stroke
 			(width 0)
@@ -18172,6 +18312,16 @@
 			(type dot)
 		)
 		(uuid "58e2d4a2-62d6-4a5e-964c-5ef869302a5f")
+	)
+	(wire
+		(pts
+			(xy 494.03 151.13) (xy 496.57 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5906338a-8346-4693-a6aa-9d86e05bade2")
 	)
 	(wire
 		(pts
@@ -18635,13 +18785,13 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 158.75) (xy 496.57 158.75)
+			(xy 494.03 168.91) (xy 496.57 168.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5e006b6a-ab25-497f-b15e-cbd46b7b0d90")
+		(uuid "5deb2310-e0ee-4343-8969-7d948cf90322")
 	)
 	(wire
 		(pts
@@ -18835,26 +18985,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 133.35) (xy 496.57 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5fcb0e25-fc8a-4356-8c63-37f32f59b021")
-	)
-	(wire
-		(pts
-			(xy 494.03 146.05) (xy 496.57 146.05)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "602876a0-42ac-48fc-953b-d5a35e5121ba")
-	)
-	(wire
-		(pts
 			(xy 1019.81 170.18) (xy 1017.27 170.18)
 		)
 		(stroke
@@ -18992,6 +19122,16 @@
 			(type default)
 		)
 		(uuid "6138fb6d-91c8-4fd5-965d-518997e79d46")
+	)
+	(wire
+		(pts
+			(xy 557.53 184.15) (xy 560.07 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6142787d-c178-4b1e-b6cd-959801c80101")
 	)
 	(wire
 		(pts
@@ -19205,6 +19345,16 @@
 	)
 	(wire
 		(pts
+			(xy 557.53 166.37) (xy 560.07 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "637fb52c-62d1-41b2-9185-3b24450a776a")
+	)
+	(wire
+		(pts
 			(xy 852.17 90.17) (xy 849.63 90.17)
 		)
 		(stroke
@@ -19222,6 +19372,16 @@
 			(type default)
 		)
 		(uuid "639b0fd8-258b-405b-a0c5-6257c6ca13e6")
+	)
+	(wire
+		(pts
+			(xy 483.87 214.63) (xy 483.87 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63a9ca10-2d87-45ea-85df-01aa79fdf9e2")
 	)
 	(wire
 		(pts
@@ -19692,6 +19852,16 @@
 			(type default)
 		)
 		(uuid "679a1683-ac40-4186-8e81-36b8ff6ae015")
+	)
+	(wire
+		(pts
+			(xy 514.35 298.45) (xy 514.35 297.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67b1c401-6869-45f0-9747-ae40332b6268")
 	)
 	(wire
 		(pts
@@ -20455,16 +20625,6 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 191.77) (xy 558.8 191.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7030cf60-c7d3-4574-9880-d4dfa50c7559")
-	)
-	(wire
-		(pts
 			(xy 1061.72 238.76) (xy 1059.18 238.76)
 		)
 		(stroke
@@ -20542,6 +20702,16 @@
 			(type default)
 		)
 		(uuid "70c7df51-b25c-42d0-85ed-bf6353f62090")
+	)
+	(wire
+		(pts
+			(xy 514.35 240.03) (xy 519.43 240.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70e9599f-dc0c-4e8e-bb35-9541dc21e5b6")
 	)
 	(wire
 		(pts
@@ -21075,6 +21245,16 @@
 	)
 	(wire
 		(pts
+			(xy 492.76 128.27) (xy 496.57 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "763faed5-f84f-413d-904d-a2e630cd502a")
+	)
+	(wire
+		(pts
 			(xy 863.6 250.19) (xy 863.6 261.62)
 		)
 		(stroke
@@ -21132,16 +21312,6 @@
 			(type default)
 		)
 		(uuid "76c2b618-da97-4fb7-ab9b-f77e4e8b8b44")
-	)
-	(wire
-		(pts
-			(xy 494.03 140.97) (xy 496.57 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "76ccb58b-1589-4b4b-b724-e691aab8a5a8")
 	)
 	(wire
 		(pts
@@ -21382,16 +21552,6 @@
 			(type dot)
 		)
 		(uuid "79a1d03a-cd71-4dac-a939-a6611b0c12f0")
-	)
-	(wire
-		(pts
-			(xy 494.03 166.37) (xy 496.57 166.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a040efd-0f9b-49c3-8f85-f88f44913866")
 	)
 	(wire
 		(pts
@@ -21925,16 +22085,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 135.89) (xy 496.57 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8033d2da-22d2-40c0-9809-18fa03dbeba3")
-	)
-	(wire
-		(pts
 			(xy 1059.18 101.6) (xy 1059.18 113.03)
 		)
 		(stroke
@@ -22345,6 +22495,16 @@
 	)
 	(wire
 		(pts
+			(xy 486.41 214.63) (xy 486.41 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84e5eb37-489b-4ae2-b8c8-200fe796d06f")
+	)
+	(wire
+		(pts
 			(xy 1047.75 284.48) (xy 1045.21 284.48)
 		)
 		(stroke
@@ -22352,6 +22512,16 @@
 			(type default)
 		)
 		(uuid "850251fc-b8fa-4bd7-b457-c4f61c3d1fab")
+	)
+	(wire
+		(pts
+			(xy 514.35 273.05) (xy 514.35 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8508c71e-9305-4c37-af72-17feb521c529")
 	)
 	(wire
 		(pts
@@ -22422,6 +22592,16 @@
 			(type default)
 		)
 		(uuid "86244869-5d1b-43f5-acdb-46509bb0c1ab")
+	)
+	(wire
+		(pts
+			(xy 481.33 214.63) (xy 481.33 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86292870-f22e-4978-8594-4fa90250f4f2")
 	)
 	(wire
 		(pts
@@ -22715,7 +22895,7 @@
 	)
 	(wire
 		(pts
-			(xy 523.24 246.38) (xy 528.32 246.38)
+			(xy 529.59 251.46) (xy 534.67 251.46)
 		)
 		(stroke
 			(width 0)
@@ -22865,6 +23045,26 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 143.51) (xy 496.57 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a3e3eb6-7304-4ddf-9e85-25dd906bd234")
+	)
+	(wire
+		(pts
+			(xy 514.35 264.16) (xy 519.43 264.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a4dd5af-5b52-4f65-a392-eb3b958f0031")
+	)
+	(wire
+		(pts
 			(xy 1016 93.98) (xy 1002.03 93.98)
 		)
 		(stroke
@@ -22972,6 +23172,16 @@
 			(type default)
 		)
 		(uuid "8ba9a839-5ebd-44e9-9493-4871f7de1ee2")
+	)
+	(wire
+		(pts
+			(xy 514.35 289.56) (xy 519.43 289.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bb26254-df58-4980-9e77-fb9e177c8b95")
 	)
 	(wire
 		(pts
@@ -23305,6 +23515,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 161.29) (xy 496.57 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e3b3231-ddfb-4aa5-b657-b3e904671f38")
+	)
+	(wire
+		(pts
 			(xy 946.15 135.89) (xy 946.15 128.27)
 		)
 		(stroke
@@ -23392,6 +23612,16 @@
 			(type default)
 		)
 		(uuid "8f7de49f-a916-421d-820b-93aed493d5e3")
+	)
+	(wire
+		(pts
+			(xy 514.35 248.92) (xy 514.35 247.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f9ee1ad-198d-486e-b139-71bd6552d439")
 	)
 	(wire
 		(pts
@@ -25565,16 +25795,6 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 194.31) (xy 558.8 194.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a5c57782-5d52-4f57-80bf-d061e1b684b3")
-	)
-	(wire
-		(pts
 			(xy 904.24 204.47) (xy 904.24 196.85)
 		)
 		(stroke
@@ -25675,7 +25895,7 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 184.15) (xy 558.8 184.15)
+			(xy 557.53 179.07) (xy 560.07 179.07)
 		)
 		(stroke
 			(width 0)
@@ -25885,7 +26105,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 227.33) (xy 519.43 227.33)
+			(xy 509.27 227.33) (xy 514.35 227.33)
 		)
 		(stroke
 			(width 0)
@@ -26135,6 +26355,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 146.05) (xy 496.57 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac4883e8-61e0-4f19-9210-17d062c917d8")
+	)
+	(wire
+		(pts
 			(xy 935.99 193.04) (xy 933.45 193.04)
 		)
 		(stroke
@@ -26222,6 +26452,16 @@
 			(type default)
 		)
 		(uuid "adb585d5-de0a-4beb-b84a-0f1c72598752")
+	)
+	(wire
+		(pts
+			(xy 557.53 181.61) (xy 560.07 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adca0321-ad00-409b-9f01-f73887971b96")
 	)
 	(wire
 		(pts
@@ -26425,6 +26665,16 @@
 	)
 	(wire
 		(pts
+			(xy 636.27 152.4) (xy 643.89 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afab7f2f-7f17-46a2-9120-9d3444f6ffef")
+	)
+	(wire
+		(pts
 			(xy 1069.34 284.48) (xy 1071.88 284.48)
 		)
 		(stroke
@@ -26455,7 +26705,7 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 179.07) (xy 558.8 179.07)
+			(xy 557.53 173.99) (xy 560.07 173.99)
 		)
 		(stroke
 			(width 0)
@@ -26635,6 +26885,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 163.83) (xy 496.57 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2614336-6d73-40f9-93f8-48aedce626b7")
+	)
+	(wire
+		(pts
 			(xy 890.27 105.41) (xy 862.33 105.41)
 		)
 		(stroke
@@ -26732,6 +26992,16 @@
 			(type default)
 		)
 		(uuid "b35d8806-c3a9-4ac4-bf87-3e5776d15caf")
+	)
+	(wire
+		(pts
+			(xy 557.53 196.85) (xy 560.07 196.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b37ee0ee-9946-4dc2-a4e9-05931fbca47c")
 	)
 	(wire
 		(pts
@@ -26855,7 +27125,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 266.7) (xy 519.43 266.7)
+			(xy 509.27 276.86) (xy 514.35 276.86)
 		)
 		(stroke
 			(width 0)
@@ -27325,6 +27595,16 @@
 	)
 	(wire
 		(pts
+			(xy 488.95 214.63) (xy 488.95 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8fc6c82-fbb6-4876-b86a-3757ad21a89f")
+	)
+	(wire
+		(pts
 			(xy 908.05 227.33) (xy 905.51 227.33)
 		)
 		(stroke
@@ -27625,6 +27905,16 @@
 	)
 	(wire
 		(pts
+			(xy 529.59 289.56) (xy 534.67 289.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc795c04-374d-436f-ad79-bc691923b6ad")
+	)
+	(wire
+		(pts
 			(xy 876.3 139.7) (xy 862.33 139.7)
 		)
 		(stroke
@@ -27842,6 +28132,16 @@
 			(type default)
 		)
 		(uuid "be34230d-9cb8-4083-8dfe-39c94226de05")
+	)
+	(wire
+		(pts
+			(xy 514.35 236.22) (xy 514.35 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be627974-61c9-47c6-97c5-1d73964b4053")
 	)
 	(wire
 		(pts
@@ -28145,7 +28445,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 246.38) (xy 519.43 246.38)
+			(xy 509.27 251.46) (xy 514.35 251.46)
 		)
 		(stroke
 			(width 0)
@@ -28355,6 +28655,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 158.75) (xy 496.57 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c31f2738-77b2-4d7a-b4b8-3ee75e956586")
+	)
+	(wire
+		(pts
 			(xy 831.85 273.05) (xy 834.39 273.05)
 		)
 		(stroke
@@ -28435,7 +28745,7 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 181.61) (xy 558.8 181.61)
+			(xy 557.53 176.53) (xy 560.07 176.53)
 		)
 		(stroke
 			(width 0)
@@ -28605,7 +28915,7 @@
 	)
 	(wire
 		(pts
-			(xy 523.24 227.33) (xy 528.32 227.33)
+			(xy 529.59 227.33) (xy 534.67 227.33)
 		)
 		(stroke
 			(width 0)
@@ -28792,16 +29102,6 @@
 			(type default)
 		)
 		(uuid "c7c1be12-a5b5-4969-8bde-aa71f135b1ed")
-	)
-	(wire
-		(pts
-			(xy 557.53 189.23) (xy 558.8 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c7d67d51-4554-4f69-9b13-c1d903b5d40a")
 	)
 	(wire
 		(pts
@@ -29145,16 +29445,6 @@
 	)
 	(wire
 		(pts
-			(xy 557.53 171.45) (xy 558.8 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb2ed86e-fdbc-41f1-b9c4-de2454421557")
-	)
-	(wire
-		(pts
 			(xy 1002.03 128.27) (xy 988.06 128.27)
 		)
 		(stroke
@@ -29212,16 +29502,6 @@
 			(type default)
 		)
 		(uuid "cbb78cb7-3021-4601-9e1c-2d350d4095cb")
-	)
-	(wire
-		(pts
-			(xy 494.03 191.77) (xy 496.57 191.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbd12258-4431-4a38-909c-14579b4cbfb5")
 	)
 	(wire
 		(pts
@@ -29465,16 +29745,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 143.51) (xy 496.57 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cde66b01-8e48-4afa-9e5b-17d2759ce98b")
-	)
-	(wire
-		(pts
 			(xy 873.76 204.47) (xy 876.3 204.47)
 		)
 		(stroke
@@ -29535,6 +29805,16 @@
 	)
 	(wire
 		(pts
+			(xy 514.35 260.35) (xy 514.35 259.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce2e9e34-e285-4b9a-ab01-f61fff28cd19")
+	)
+	(wire
+		(pts
 			(xy 1085.85 162.56) (xy 1071.88 162.56)
 		)
 		(stroke
@@ -29582,6 +29862,16 @@
 			(type default)
 		)
 		(uuid "cf52917d-5026-4be9-9147-78895fa78b84")
+	)
+	(wire
+		(pts
+			(xy 514.35 227.33) (xy 519.43 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf682254-9681-4c4b-a5ff-eccaa1f42c83")
 	)
 	(wire
 		(pts
@@ -30065,7 +30355,7 @@
 	)
 	(wire
 		(pts
-			(xy 523.24 266.7) (xy 528.32 266.7)
+			(xy 529.59 276.86) (xy 534.67 276.86)
 		)
 		(stroke
 			(width 0)
@@ -30195,7 +30485,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 237.49) (xy 519.43 237.49)
+			(xy 509.27 240.03) (xy 514.35 240.03)
 		)
 		(stroke
 			(width 0)
@@ -30482,16 +30772,6 @@
 			(type default)
 		)
 		(uuid "d73d83f7-0fb3-4752-8759-05be31a6d3de")
-	)
-	(wire
-		(pts
-			(xy 494.03 156.21) (xy 496.57 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d746beee-41b3-4497-b7b1-967dacad0cec")
 	)
 	(wire
 		(pts
@@ -30855,6 +31135,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 191.77) (xy 496.57 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db26ee8a-c607-480d-b519-0a109cd453af")
+	)
+	(wire
+		(pts
 			(xy 932.18 55.88) (xy 932.18 48.26)
 		)
 		(stroke
@@ -31122,6 +31412,16 @@
 			(type dot)
 		)
 		(uuid "de2e522a-2679-425d-98df-0411fc02e337")
+	)
+	(wire
+		(pts
+			(xy 557.53 189.23) (xy 560.07 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de3ada82-086d-40e6-b1da-fdd9cb65448e")
 	)
 	(wire
 		(pts
@@ -31765,16 +32065,6 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 128.27) (xy 496.57 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e47bc865-e2b9-49f7-bfa3-5900dcad501a")
-	)
-	(wire
-		(pts
 			(xy 974.09 215.9) (xy 974.09 208.28)
 		)
 		(stroke
@@ -32265,6 +32555,16 @@
 	)
 	(wire
 		(pts
+			(xy 636.27 147.32) (xy 636.27 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8ec731b-d1b0-49f5-ae8c-ac184a0cd558")
+	)
+	(wire
+		(pts
 			(xy 989.33 101.6) (xy 989.33 113.03)
 		)
 		(stroke
@@ -32385,7 +32685,7 @@
 	)
 	(wire
 		(pts
-			(xy 509.27 256.54) (xy 519.43 256.54)
+			(xy 509.27 264.16) (xy 514.35 264.16)
 		)
 		(stroke
 			(width 0)
@@ -32435,6 +32735,16 @@
 	)
 	(wire
 		(pts
+			(xy 476.25 217.17) (xy 476.25 214.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea65dff4-0f62-41e2-a36a-d6850be859a7")
+	)
+	(wire
+		(pts
 			(xy 807.72 273.05) (xy 807.72 284.48)
 		)
 		(stroke
@@ -32445,13 +32755,13 @@
 	)
 	(wire
 		(pts
-			(xy 494.03 163.83) (xy 496.57 163.83)
+			(xy 636.27 149.86) (xy 643.89 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ea6f33b3-52d6-4dca-85b6-085b531689a2")
+		(uuid "ea68908a-6d2f-4d3d-98c5-2924e40118d5")
 	)
 	(wire
 		(pts
@@ -32512,6 +32822,16 @@
 			(type default)
 		)
 		(uuid "eb06ff26-05ba-4af6-97c2-41c01de44277")
+	)
+	(wire
+		(pts
+			(xy 557.53 191.77) (xy 560.07 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb32a42f-7ea4-4dc1-aaa7-0d97398c0b82")
 	)
 	(wire
 		(pts
@@ -32705,6 +33025,16 @@
 	)
 	(wire
 		(pts
+			(xy 494.03 153.67) (xy 496.57 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed7c615a-5ab5-4652-8bcf-28c9763f73e0")
+	)
+	(wire
+		(pts
 			(xy 806.45 284.48) (xy 806.45 276.86)
 		)
 		(stroke
@@ -32775,7 +33105,7 @@
 	)
 	(wire
 		(pts
-			(xy 523.24 256.54) (xy 528.32 256.54)
+			(xy 529.59 264.16) (xy 534.67 264.16)
 		)
 		(stroke
 			(width 0)
@@ -33012,6 +33342,16 @@
 			(type default)
 		)
 		(uuid "f0f3f528-24f2-46a1-b339-ca5b5633f68b")
+	)
+	(wire
+		(pts
+			(xy 492.76 130.81) (xy 496.57 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f121019b-75be-432e-b7dc-566d71add1a8")
 	)
 	(wire
 		(pts
@@ -33302,6 +33642,16 @@
 			(type dot)
 		)
 		(uuid "f4082e93-40a7-4667-b41c-72087a84cbc4")
+	)
+	(wire
+		(pts
+			(xy 509.27 289.56) (xy 514.35 289.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f42b8e46-0264-42b6-860d-be10ed981b9a")
 	)
 	(wire
 		(pts
@@ -34858,7 +35208,7 @@
 	)
 	(global_label "CHRLY_10"
 		(shape output)
-		(at 494.03 153.67 180)
+		(at 494.03 158.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -34868,7 +35218,7 @@
 		)
 		(uuid "0125cd96-644f-427f-a715-4cfbbe742f35")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 153.67 0)
+			(at 482.8805 158.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34946,7 +35296,7 @@
 	)
 	(global_label "BATT +"
 		(shape input)
-		(at 572.77 186.69 90)
+		(at 574.04 186.69 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -34956,7 +35306,29 @@
 		)
 		(uuid "11b084d8-cabb-46ea-8915-a9ae7094fe04")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 572.77 176.871 90)
+			(at 574.04 176.871 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT +"
+		(shape input)
+		(at 514.35 248.92 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14c8f0c6-7bed-4832-a884-20f63aa034fd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 524.169 248.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34990,7 +35362,7 @@
 	)
 	(global_label "CHRLY_2"
 		(shape output)
-		(at 494.03 130.81 180)
+		(at 494.03 135.89 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35000,7 +35372,7 @@
 		)
 		(uuid "170f21f9-1fed-45d0-9b96-a90765efe8fe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 130.81 0)
+			(at 482.8805 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35010,31 +35382,9 @@
 			)
 		)
 	)
-	(global_label "BTN_6"
-		(shape output)
-		(at 558.8 171.45 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "20a28404-e660-491b-8ab3-f74b1804403a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 567.5304 171.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "CHRLY_11"
 		(shape output)
-		(at 494.03 156.21 180)
+		(at 494.03 161.29 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -35043,7 +35393,7 @@
 		)
 		(uuid "22641f71-ef37-450c-be58-48c958634ac0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 255.27 0)
+			(at 580.6705 260.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35055,7 +35405,7 @@
 	)
 	(global_label "BTN_2"
 		(shape output)
-		(at 509.27 237.49 180)
+		(at 509.27 240.03 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35065,7 +35415,7 @@
 		)
 		(uuid "25610c3f-d601-48b2-80e6-6e69a7fedb15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 500.5396 237.49 0)
+			(at 500.5396 240.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35098,7 +35448,7 @@
 	)
 	(global_label "CHRLY_1"
 		(shape output)
-		(at 494.03 128.27 180)
+		(at 494.03 133.35 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35108,7 +35458,7 @@
 		)
 		(uuid "2bcbf125-ed75-4de6-b912-84ff5bf17b3d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 128.27 0)
+			(at 482.8805 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35120,7 +35470,7 @@
 	)
 	(global_label "BTN_5"
 		(shape output)
-		(at 558.8 173.99 0)
+		(at 560.07 168.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35130,7 +35480,7 @@
 		)
 		(uuid "300503e0-f827-4754-966b-1c07a1280959")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 173.99 0)
+			(at 571.2195 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35162,6 +35512,28 @@
 			)
 		)
 	)
+	(global_label "BTN_6"
+		(shape output)
+		(at 509.27 289.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "34d02a51-83f1-4e91-a793-421a06047bbf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 500.5396 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "CHRLY_13"
 		(shape input)
 		(at 947.42 311.15 270)
@@ -35180,6 +35552,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BTN_6"
+		(shape output)
+		(at 560.07 166.37 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "387bd539-9eae-4a43-a594-63c85bf03c5e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 568.8004 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -35252,7 +35646,7 @@
 	)
 	(global_label "CHRLY_6"
 		(shape output)
-		(at 494.03 140.97 180)
+		(at 494.03 146.05 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35262,7 +35656,29 @@
 		)
 		(uuid "408fde37-83a8-4a45-a766-3f9998bd1735")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 140.97 0)
+			(at 482.8805 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SWCLK"
+		(shape input)
+		(at 496.57 184.15 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "40ddd9bd-94a1-41d8-b5bc-ed30f6976908")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 487.3558 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35317,7 +35733,7 @@
 	)
 	(global_label "BTN_3"
 		(shape output)
-		(at 558.8 179.07 0)
+		(at 560.07 173.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35327,7 +35743,7 @@
 		)
 		(uuid "4a75da9b-3916-4002-a235-35bba3db48c3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 179.07 0)
+			(at 571.2195 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35337,9 +35753,31 @@
 			)
 		)
 	)
+	(global_label "TX"
+		(shape input)
+		(at 492.76 128.27 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4a92f940-a040-4323-bc1a-dbefc0bdd64a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 487.5977 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "CHRLY_21"
 		(shape output)
-		(at 558.8 191.77 0)
+		(at 560.07 184.15 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35349,7 +35787,7 @@
 		)
 		(uuid "4f69bfc1-5015-4f36-826d-52d661320a40")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 191.77 0)
+			(at 571.2195 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35361,7 +35799,7 @@
 	)
 	(global_label "BTN_5"
 		(shape output)
-		(at 509.27 266.7 180)
+		(at 509.27 276.86 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35371,7 +35809,7 @@
 		)
 		(uuid "521c7876-9560-45ee-afd4-f28ae3f2471f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 500.5396 266.7 0)
+			(at 500.5396 276.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35383,7 +35821,7 @@
 	)
 	(global_label "CHRLY_4"
 		(shape output)
-		(at 494.03 135.89 180)
+		(at 494.03 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35393,7 +35831,7 @@
 		)
 		(uuid "52527050-ee7b-41fd-9498-bb81ffbbaf70")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 135.89 0)
+			(at 482.8805 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35405,7 +35843,7 @@
 	)
 	(global_label "CHRLY_5"
 		(shape output)
-		(at 494.03 138.43 180)
+		(at 494.03 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35415,7 +35853,7 @@
 		)
 		(uuid "565366bb-8379-423f-8162-c22138156f59")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 138.43 0)
+			(at 482.8805 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35493,21 +35931,21 @@
 	)
 	(global_label "CHRLY_18"
 		(shape output)
-		(at 494.03 194.31 180)
+		(at 560.07 194.31 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "6120083f-f859-4ffe-b5d7-3bcfae1fbbdb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 293.37 0)
+			(at 473.4295 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -35534,31 +35972,9 @@
 			)
 		)
 	)
-	(global_label "BTN_DATA_OUT"
-		(shape output)
-		(at 528.32 276.86 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "620c3858-8223-47bd-b493-cca48ae886ce")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 544.8519 276.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "CHRLY_16"
 		(shape output)
-		(at 494.03 168.91 180)
+		(at 494.03 194.31 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -35567,7 +35983,7 @@
 		)
 		(uuid "64712fd1-ce04-416d-93e7-f3b9ae9372d0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 267.97 0)
+			(at 580.6705 293.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35621,18 +36037,41 @@
 			)
 		)
 	)
-	(global_label "CHRLY_14"
-		(shape output)
-		(at 494.03 163.83 180)
+	(global_label "RX"
+		(shape input)
+		(at 492.76 130.81 180)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "6e3d7975-43b7-4083-8e6e-4582b516b57c")
+		(uuid "6980326e-ff87-418a-8f8b-b2e40070ffb9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 262.89 0)
+			(at 487.2953 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT +"
+		(shape input)
+		(at 514.35 298.45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6a064446-1446-48f9-81bf-a171dfb45fbf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 524.169 298.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35642,9 +36081,52 @@
 			)
 		)
 	)
+	(global_label "CHRLY_14"
+		(shape output)
+		(at 494.03 168.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6e3d7975-43b7-4083-8e6e-4582b516b57c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 580.6705 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT +"
+		(shape input)
+		(at 486.41 217.17 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6e461b13-b286-4ffe-8630-ba395c398b7a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 486.41 226.989 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "CHRLY_20"
 		(shape output)
-		(at 558.8 194.31 0)
+		(at 560.07 189.23 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35654,7 +36136,7 @@
 		)
 		(uuid "6eed85ef-bcb3-4e99-b252-495652d20dfe")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 194.31 0)
+			(at 571.2195 189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35686,31 +36168,9 @@
 			)
 		)
 	)
-	(global_label "BTN_DATA_OUT"
-		(shape output)
-		(at 528.32 227.33 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7343c68f-dc51-4e46-a0e6-8d19cf585c33")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 544.8519 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "CHRLY_22"
 		(shape output)
-		(at 558.8 189.23 0)
+		(at 560.07 181.61 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35720,7 +36180,7 @@
 		)
 		(uuid "77275554-7b21-428d-984c-06593d9a8ec8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 189.23 0)
+			(at 571.2195 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35820,7 +36280,7 @@
 	)
 	(global_label "CHRLY_13"
 		(shape output)
-		(at 494.03 161.29 180)
+		(at 494.03 166.37 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -35829,7 +36289,7 @@
 		)
 		(uuid "7b39e360-5754-4ad1-9b75-c9adf5932ad6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 260.35 0)
+			(at 580.6705 265.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35861,6 +36321,50 @@
 			)
 		)
 	)
+	(global_label "TX"
+		(shape input)
+		(at 481.33 217.17 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "81f99207-ba84-4b76-9a1a-da5a8bc3bdfe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 481.33 222.3323 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT +"
+		(shape input)
+		(at 514.35 285.75 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "83942c36-f44f-4195-b461-4ba0671e77a5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 524.169 285.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "BATT +"
 		(shape input)
 		(at 585.47 146.05 90)
@@ -35879,6 +36383,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SWDIO"
+		(shape input)
+		(at 478.79 217.17 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8dea8d31-a7b7-4443-a6fe-31752b75fae7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 478.79 226.0214 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -35907,7 +36433,7 @@
 	)
 	(global_label "BTN_4"
 		(shape output)
-		(at 558.8 176.53 0)
+		(at 560.07 171.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35917,7 +36443,7 @@
 		)
 		(uuid "910cc6e3-173f-440a-8eb1-68e3222c7310")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 176.53 0)
+			(at 571.2195 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35929,7 +36455,7 @@
 	)
 	(global_label "CHRLY_7"
 		(shape output)
-		(at 494.03 143.51 180)
+		(at 494.03 151.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -35939,7 +36465,7 @@
 		)
 		(uuid "91b5dd6a-c5af-49d7-8cfb-c5aa44a5b564")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 143.51 0)
+			(at 482.8805 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35994,7 +36520,7 @@
 	)
 	(global_label "BTN_3"
 		(shape output)
-		(at 509.27 246.38 180)
+		(at 509.27 251.46 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36004,7 +36530,7 @@
 		)
 		(uuid "9b17c271-ae5c-4f8f-9574-1110391a7712")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 500.5396 246.38 0)
+			(at 500.5396 251.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36027,6 +36553,28 @@
 		(uuid "a0fdf075-5639-48cb-a4c9-6f4ba1f37d9b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 734.1591 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SWDIO"
+		(shape input)
+		(at 496.57 186.69 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a113ee4a-87a0-4184-af87-716ec0fcadb0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 487.7186 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36082,28 +36630,28 @@
 	)
 	(global_label "CHRLY_17"
 		(shape output)
-		(at 494.03 191.77 180)
+		(at 560.07 196.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "a3963229-49d6-429f-a0ca-f876da52aeb4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 290.83 0)
+			(at 473.4295 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
 	)
 	(global_label "CHRLY_3"
 		(shape output)
-		(at 494.03 133.35 180)
+		(at 494.03 138.43 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36113,7 +36661,7 @@
 		)
 		(uuid "aa462ee9-3bf6-45e5-85e9-8dddfd78cc11")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 133.35 0)
+			(at 482.8805 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36213,7 +36761,7 @@
 	)
 	(global_label "BTN_4"
 		(shape output)
-		(at 509.27 256.54 180)
+		(at 509.27 264.16 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36223,7 +36771,7 @@
 		)
 		(uuid "af1a2d0a-db24-4ff9-b49e-605f00d75ee1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 500.5396 256.54 0)
+			(at 500.5396 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36235,7 +36783,7 @@
 	)
 	(global_label "CHRLY_19"
 		(shape output)
-		(at 558.8 196.85 0)
+		(at 560.07 191.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36245,7 +36793,7 @@
 		)
 		(uuid "b0e2f349-9d7c-4ffa-92e9-fddcce3aac22")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 196.85 0)
+			(at 571.2195 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36273,28 +36821,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BTN_DATA_OUT"
-		(shape output)
-		(at 528.32 266.7 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b357fdd6-aa8b-4ffb-907d-51f25cf91a33")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 544.8519 266.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -36361,28 +36887,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BTN_DATA_OUT"
-		(shape output)
-		(at 528.32 237.49 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c5bb9fce-672f-4586-afb0-6d7e292c266c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 544.8519 237.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -36455,7 +36959,7 @@
 	)
 	(global_label "BTN_2"
 		(shape output)
-		(at 558.8 181.61 0)
+		(at 560.07 176.53 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36465,7 +36969,7 @@
 		)
 		(uuid "ca1a8230-1f31-4262-b3f6-2bd1ec424aad")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 181.61 0)
+			(at 571.2195 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36477,7 +36981,7 @@
 	)
 	(global_label "CHRLY_12"
 		(shape output)
-		(at 494.03 158.75 180)
+		(at 494.03 163.83 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -36486,12 +36990,34 @@
 		)
 		(uuid "cb0c10d4-36a0-4148-a0f6-48390b746270")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 257.81 0)
+			(at 580.6705 262.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RX"
+		(shape input)
+		(at 483.87 217.17 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ccfaad96-11b2-4a2f-9d10-b5d4b4e05384")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 483.87 222.6347 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -36509,6 +37035,50 @@
 		(uuid "cf686d85-e903-466f-b310-f879a97a86cc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 500.5396 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT +"
+		(shape input)
+		(at 514.35 236.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5fb338c-d28a-4668-a359-909393c31672")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 524.169 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "D+"
+		(shape input)
+		(at 636.27 153.67 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "da65bd5d-a175-4334-8c28-2bcbeaa8a866")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 636.27 159.4976 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36542,7 +37112,7 @@
 	)
 	(global_label "CHRLY_9"
 		(shape output)
-		(at 494.03 151.13 180)
+		(at 494.03 156.21 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36552,56 +37122,12 @@
 		)
 		(uuid "db614c86-0b19-4848-9b0d-47b22cd570f6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 151.13 0)
+			(at 482.8805 156.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BTN_DATA_OUT"
-		(shape output)
-		(at 558.8 168.91 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dc3f0e7a-b3e5-487f-abcb-cc82e4eb5e67")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 575.3319 168.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BTN_DATA_OUT"
-		(shape output)
-		(at 528.32 256.54 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "dc89a165-95a9-4835-842f-54364463292c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 544.8519 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -36696,7 +37222,7 @@
 	)
 	(global_label "CHRLY_8"
 		(shape output)
-		(at 494.03 146.05 180)
+		(at 494.03 153.67 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36706,7 +37232,7 @@
 		)
 		(uuid "dfce23f5-ad20-4038-9dc2-60ffa831d40a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 482.8805 146.05 0)
+			(at 482.8805 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36729,6 +37255,50 @@
 		(uuid "e05cfc8e-b35e-46f8-9c38-33d884502185")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 734.1591 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "D-"
+		(shape input)
+		(at 636.27 147.32 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e072ad7f-0680-4436-bd88-80e75ea85862")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 636.27 141.4924 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SWCLK"
+		(shape input)
+		(at 476.25 217.17 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e206cd63-da43-4e8a-8352-aaf4caa124fb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 476.25 226.3842 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36782,53 +37352,9 @@
 			)
 		)
 	)
-	(global_label "BTN_6"
-		(shape output)
-		(at 509.27 276.86 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e8e73a28-d6b8-412d-b14f-b627ec34c795")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 500.5396 276.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BTN_DATA_OUT"
-		(shape output)
-		(at 528.32 246.38 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e97bfd35-6d32-441f-88eb-b4539bb30732")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 544.8519 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "BTN_1"
 		(shape output)
-		(at 558.8 184.15 0)
+		(at 560.07 179.07 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -36838,7 +37364,7 @@
 		)
 		(uuid "e9d308b3-e19f-4585-856d-22bd7be8457e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 569.9495 184.15 0)
+			(at 571.2195 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36871,7 +37397,7 @@
 	)
 	(global_label "CHRLY_15"
 		(shape output)
-		(at 494.03 166.37 180)
+		(at 494.03 191.77 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -36880,7 +37406,7 @@
 		)
 		(uuid "eda831c6-5cd2-4de7-84fa-131ec4030fbc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 580.6705 265.43 0)
+			(at 580.6705 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36908,6 +37434,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT +"
+		(shape input)
+		(at 514.35 273.05 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f4eda7d2-cadf-4664-8832-162e781a540c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 524.169 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -36956,6 +37504,28 @@
 			)
 		)
 	)
+	(global_label "BATT +"
+		(shape input)
+		(at 514.35 260.35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fef66cc5-81aa-4d1f-90d4-5847a606a3cc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 524.169 260.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:LED")
 		(at 786.13 284.48 0)
@@ -36982,7 +37552,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 284.48 0)
 			(effects
 				(font
@@ -37118,7 +37688,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 55.88 0)
 			(effects
 				(font
@@ -37186,7 +37756,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 284.48 0)
 			(effects
 				(font
@@ -37254,7 +37824,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 284.48 0)
 			(effects
 				(font
@@ -37322,7 +37892,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 250.19 0)
 			(effects
 				(font
@@ -37390,7 +37960,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 181.61 0)
 			(effects
 				(font
@@ -37457,7 +38027,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 158.75 0)
 			(effects
 				(font
@@ -37525,7 +38095,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 273.05 0)
 			(effects
 				(font
@@ -37593,7 +38163,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 78.74 0)
 			(effects
 				(font
@@ -37728,7 +38298,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 170.18 0)
 			(effects
 				(font
@@ -37796,7 +38366,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 227.33 0)
 			(effects
 				(font
@@ -37864,7 +38434,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 227.33 0)
 			(effects
 				(font
@@ -37932,7 +38502,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 227.33 0)
 			(effects
 				(font
@@ -38041,6 +38611,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 488.95 217.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03ca1df8-a5da-47ff-ae68-2bd4dfc0d253")
+		(property "Reference" "#PWR016"
+			(at 488.95 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 489.204 227.076 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 488.95 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 488.95 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 488.95 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5d7ddca-1341-4b0c-ab52-9a07130d6188")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 814.07 90.17 0)
 		(unit 1)
@@ -38066,7 +38701,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 90.17 0)
 			(effects
 				(font
@@ -38134,7 +38769,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 55.88 0)
 			(effects
 				(font
@@ -38202,7 +38837,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 101.6 0)
 			(effects
 				(font
@@ -38336,7 +38971,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 55.88 0)
 			(effects
 				(font
@@ -38404,7 +39039,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 113.03 0)
 			(effects
 				(font
@@ -38472,7 +39107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 101.6 0)
 			(effects
 				(font
@@ -38540,7 +39175,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 215.9 0)
 			(effects
 				(font
@@ -38608,7 +39243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 250.19 0)
 			(effects
 				(font
@@ -38676,7 +39311,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 215.9 0)
 			(effects
 				(font
@@ -38744,7 +39379,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 284.48 0)
 			(effects
 				(font
@@ -38812,7 +39447,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 193.04 0)
 			(effects
 				(font
@@ -38880,7 +39515,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 637.54 198.4248 0)
 			(effects
 				(font
@@ -38947,7 +39582,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 158.75 0)
 			(effects
 				(font
@@ -39015,7 +39650,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 181.61 0)
 			(effects
 				(font
@@ -39083,7 +39718,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 101.6 0)
 			(effects
 				(font
@@ -39151,7 +39786,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 67.31 0)
 			(effects
 				(font
@@ -39219,7 +39854,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 101.6 0)
 			(effects
 				(font
@@ -39287,7 +39922,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 90.17 0)
 			(effects
 				(font
@@ -39355,7 +39990,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 273.05 0)
 			(effects
 				(font
@@ -39514,7 +40149,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 78.74 0)
 			(effects
 				(font
@@ -39582,7 +40217,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 261.62 0)
 			(effects
 				(font
@@ -39650,7 +40285,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 215.9 0)
 			(effects
 				(font
@@ -39718,7 +40353,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 238.76 0)
 			(effects
 				(font
@@ -39786,7 +40421,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 101.6 0)
 			(effects
 				(font
@@ -39854,7 +40489,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 273.05 0)
 			(effects
 				(font
@@ -39922,7 +40557,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 55.88 0)
 			(effects
 				(font
@@ -39990,7 +40625,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 55.88 0)
 			(effects
 				(font
@@ -40057,7 +40692,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 158.75 0)
 			(effects
 				(font
@@ -40125,7 +40760,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 204.47 0)
 			(effects
 				(font
@@ -40193,7 +40828,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 215.9 0)
 			(effects
 				(font
@@ -40261,7 +40896,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 101.6 0)
 			(effects
 				(font
@@ -40329,7 +40964,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 170.18 0)
 			(effects
 				(font
@@ -40397,7 +41032,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 193.04 0)
 			(effects
 				(font
@@ -40465,7 +41100,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 284.48 0)
 			(effects
 				(font
@@ -40606,7 +41241,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 55.88 0)
 			(effects
 				(font
@@ -40674,7 +41309,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 589.28 129.8448 0)
 			(effects
 				(font
@@ -40742,7 +41377,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 193.04 0)
 			(effects
 				(font
@@ -40810,7 +41445,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 181.61 0)
 			(effects
 				(font
@@ -40878,7 +41513,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 181.61 0)
 			(effects
 				(font
@@ -41181,7 +41816,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 147.32 0)
 			(effects
 				(font
@@ -41249,7 +41884,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 193.04 0)
 			(effects
 				(font
@@ -41292,6 +41927,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 534.67 227.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "164c9071-4d06-4cfb-9006-168e0d098b31")
+		(property "Reference" "#PWR017"
+			(at 541.02 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 538.48 227.3299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 534.67 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cbc71289-4e30-4d49-ae77-9bb272c92908")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 953.77 193.04 0)
 		(unit 1)
@@ -41317,7 +42019,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 193.04 0)
 			(effects
 				(font
@@ -41385,7 +42087,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 193.04 0)
 			(effects
 				(font
@@ -41453,7 +42155,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 55.88 0)
 			(effects
 				(font
@@ -41521,7 +42223,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 215.9 0)
 			(effects
 				(font
@@ -41655,7 +42357,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 113.03 0)
 			(effects
 				(font
@@ -41723,7 +42425,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 135.89 0)
 			(effects
 				(font
@@ -41791,7 +42493,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 261.62 0)
 			(effects
 				(font
@@ -41859,7 +42561,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 135.89 0)
 			(effects
 				(font
@@ -41927,7 +42629,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 215.9 0)
 			(effects
 				(font
@@ -41995,7 +42697,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 227.33 0)
 			(effects
 				(font
@@ -42063,7 +42765,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 273.05 0)
 			(effects
 				(font
@@ -42131,7 +42833,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 261.62 0)
 			(effects
 				(font
@@ -42199,7 +42901,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 261.62 0)
 			(effects
 				(font
@@ -42267,7 +42969,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 124.46 0)
 			(effects
 				(font
@@ -42335,7 +43037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 215.9 0)
 			(effects
 				(font
@@ -42403,7 +43105,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 67.31 0)
 			(effects
 				(font
@@ -42471,7 +43173,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 90.17 0)
 			(effects
 				(font
@@ -42539,7 +43241,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 90.17 0)
 			(effects
 				(font
@@ -42607,7 +43309,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 284.48 0)
 			(effects
 				(font
@@ -42675,7 +43377,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 261.62 0)
 			(effects
 				(font
@@ -42743,7 +43445,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 67.31 0)
 			(effects
 				(font
@@ -42786,6 +43488,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 534.67 264.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1f3dcef0-786d-43a8-a8b6-e7aa05a2a599")
+		(property "Reference" "#PWR020"
+			(at 541.02 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 538.48 264.1599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 534.67 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5495c24e-b5da-4d82-a2b3-20fa3fc7f8cf")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1009.65 261.62 0)
 		(unit 1)
@@ -42811,7 +43580,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 261.62 0)
 			(effects
 				(font
@@ -42854,6 +43623,88 @@
 		)
 	)
 	(symbol
+		(lib_id "MySymbols:PogoConnector")
+		(at 482.6 212.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20feeae4-82ea-47f6-9bf0-6782ddbd2776")
+		(property "Reference" "PogoConnector1"
+			(at 490.22 208.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "~"
+			(at 490.22 210.185 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MyFootprints:PogoConnector"
+			(at 482.6 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 482.6 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 482.6 212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin ""
+			(uuid "c56ebb96-52a7-4804-b1e5-ebf1d85e2c12")
+		)
+		(pin ""
+			(uuid "154cf0bf-8ee4-4c1a-9647-fd9dba6b8703")
+		)
+		(pin ""
+			(uuid "ac4f48b2-d4a0-45a6-8ce8-71dc688f1db0")
+		)
+		(pin ""
+			(uuid "eb96caaa-7a62-493b-a59b-763399a9ffda")
+		)
+		(pin ""
+			(uuid "1022c5a5-06ed-4e43-8d2d-3037aca2fe9a")
+		)
+		(pin ""
+			(uuid "c5e1034d-78f6-434f-9c70-391b9dd3cc66")
+		)
+		(instances
+			(project ""
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "PogoConnector1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1079.5 170.18 0)
 		(unit 1)
@@ -42879,7 +43730,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 170.18 0)
 			(effects
 				(font
@@ -42947,7 +43798,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 204.47 0)
 			(effects
 				(font
@@ -43015,7 +43866,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 238.76 0)
 			(effects
 				(font
@@ -43083,7 +43934,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 238.76 0)
 			(effects
 				(font
@@ -43218,7 +44069,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 261.62 0)
 			(effects
 				(font
@@ -43286,7 +44137,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 170.18 0)
 			(effects
 				(font
@@ -43354,7 +44205,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 204.47 0)
 			(effects
 				(font
@@ -43422,7 +44273,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 181.61 0)
 			(effects
 				(font
@@ -43490,7 +44341,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 147.32 0)
 			(effects
 				(font
@@ -43624,7 +44475,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 193.04 0)
 			(effects
 				(font
@@ -43758,7 +44609,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 250.19 0)
 			(effects
 				(font
@@ -43826,7 +44677,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 44.45 0)
 			(effects
 				(font
@@ -43869,77 +44720,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MySymbols:CapacitiveTouch")
-		(at 520.7 247.65 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2c81db85-2854-4b14-b104-d75575a99d7e")
-		(property "Reference" "U6"
-			(at 525.78 240.6649 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "~"
-			(at 525.78 242.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 520.7 247.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 520.7 247.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 520.7 247.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "60b779f0-ee95-41bd-b405-6d7b13495ac7")
-		)
-		(pin "1"
-			(uuid "4d5223b4-703f-44d1-ab60-0856aa1de8be")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 981.71 250.19 0)
 		(unit 1)
@@ -43965,7 +44745,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 250.19 0)
 			(effects
 				(font
@@ -44033,7 +44813,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 55.88 0)
 			(effects
 				(font
@@ -44101,7 +44881,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 113.03 0)
 			(effects
 				(font
@@ -44169,7 +44949,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 44.45 0)
 			(effects
 				(font
@@ -44237,7 +45017,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 273.05 0)
 			(effects
 				(font
@@ -44305,7 +45085,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 273.05 0)
 			(effects
 				(font
@@ -44373,7 +45153,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 284.48 0)
 			(effects
 				(font
@@ -44441,7 +45221,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 135.89 0)
 			(effects
 				(font
@@ -44509,7 +45289,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 181.61 0)
 			(effects
 				(font
@@ -44552,6 +45332,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 534.67 251.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3058877e-cb07-422a-8783-6984df24b554")
+		(property "Reference" "#PWR019"
+			(at 541.02 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 538.48 251.4599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 534.67 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c097c590-7c17-43be-9b89-9e861a5dbeb3")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 828.04 158.75 0)
 		(unit 1)
@@ -44576,7 +45423,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 158.75 0)
 			(effects
 				(font
@@ -44644,7 +45491,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 181.61 0)
 			(effects
 				(font
@@ -44712,7 +45559,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 227.33 0)
 			(effects
 				(font
@@ -44780,7 +45627,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 261.62 0)
 			(effects
 				(font
@@ -44848,7 +45695,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 238.76 0)
 			(effects
 				(font
@@ -44916,7 +45763,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 44.45 0)
 			(effects
 				(font
@@ -44984,7 +45831,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 78.74 0)
 			(effects
 				(font
@@ -45052,7 +45899,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 250.19 0)
 			(effects
 				(font
@@ -45119,7 +45966,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 158.75 0)
 			(effects
 				(font
@@ -45187,7 +46034,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 273.05 0)
 			(effects
 				(font
@@ -45255,7 +46102,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 113.03 0)
 			(effects
 				(font
@@ -45323,7 +46170,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 238.76 0)
 			(effects
 				(font
@@ -45391,7 +46238,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 273.05 0)
 			(effects
 				(font
@@ -45459,7 +46306,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 170.18 0)
 			(effects
 				(font
@@ -45527,7 +46374,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 44.45 0)
 			(effects
 				(font
@@ -45595,7 +46442,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 67.31 0)
 			(effects
 				(font
@@ -45638,6 +46485,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 514.35 231.14 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "38c69784-7f3e-4c2a-b296-b7c9f7273a7e")
+		(property "Reference" "R10"
+			(at 516.382 231.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 511.81 231.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 512.572 231.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 514.35 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 514.35 231.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0f17825f-c821-4c8a-baa9-1aecd3325af2")
+		)
+		(pin "2"
+			(uuid "7e69a166-dcee-4f0d-b5a3-7009cde4335a")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1037.59 44.45 0)
 		(unit 1)
@@ -45663,7 +46578,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 44.45 0)
 			(effects
 				(font
@@ -45731,7 +46646,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 193.04 0)
 			(effects
 				(font
@@ -45799,7 +46714,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 261.62 0)
 			(effects
 				(font
@@ -45867,7 +46782,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 135.89 0)
 			(effects
 				(font
@@ -45935,7 +46850,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 590.55 159.0548 0)
 			(effects
 				(font
@@ -46003,7 +46918,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 44.45 0)
 			(effects
 				(font
@@ -46071,7 +46986,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 67.31 0)
 			(effects
 				(font
@@ -46139,7 +47054,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 250.19 0)
 			(effects
 				(font
@@ -46206,7 +47121,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 158.75 0)
 			(effects
 				(font
@@ -46274,7 +47189,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 193.04 0)
 			(effects
 				(font
@@ -46342,7 +47257,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 215.9 0)
 			(effects
 				(font
@@ -46476,7 +47391,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 170.18 0)
 			(effects
 				(font
@@ -46544,7 +47459,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 44.45 0)
 			(effects
 				(font
@@ -46612,7 +47527,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 170.18 0)
 			(effects
 				(font
@@ -46680,7 +47595,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 135.89 0)
 			(effects
 				(font
@@ -46723,6 +47638,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 524.51 276.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "43cf249e-1680-49da-903f-1824b9c0b6ce")
+		(property "Reference" "SW5"
+			(at 524.51 278.638 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 524.51 281.178 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyFootprints:SW_PTS647SM38SMTR2LFS_CNK"
+			(at 524.51 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 524.51 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 524.51 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b2c9d52-3970-4dd1-9cc8-3d7869ae8246")
+		)
+		(pin "2"
+			(uuid "bba8f2c6-6965-474a-929e-51f0c9fda0bb")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "SW5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1023.62 284.48 0)
 		(unit 1)
@@ -46748,7 +47730,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 284.48 0)
 			(effects
 				(font
@@ -46816,7 +47798,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 113.03 0)
 			(effects
 				(font
@@ -46884,7 +47866,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 135.89 0)
 			(effects
 				(font
@@ -46952,7 +47934,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 193.04 0)
 			(effects
 				(font
@@ -47020,7 +48002,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 55.88 0)
 			(effects
 				(font
@@ -47087,7 +48069,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 158.75 0)
 			(effects
 				(font
@@ -47155,7 +48137,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 135.89 0)
 			(effects
 				(font
@@ -47223,7 +48205,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 124.46 0)
 			(effects
 				(font
@@ -47291,7 +48273,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 101.6 0)
 			(effects
 				(font
@@ -47359,7 +48341,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 78.74 0)
 			(effects
 				(font
@@ -47427,7 +48409,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 101.6 0)
 			(effects
 				(font
@@ -47495,7 +48477,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 90.17 0)
 			(effects
 				(font
@@ -47563,7 +48545,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 113.03 0)
 			(effects
 				(font
@@ -47631,7 +48613,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 55.88 0)
 			(effects
 				(font
@@ -47699,7 +48681,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 469.9 145.0848 0)
 			(effects
 				(font
@@ -47767,7 +48749,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 193.04 0)
 			(effects
 				(font
@@ -47835,7 +48817,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 170.18 0)
 			(effects
 				(font
@@ -47903,7 +48885,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 181.61 0)
 			(effects
 				(font
@@ -48038,7 +49020,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 261.62 0)
 			(effects
 				(font
@@ -48106,7 +49088,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 55.88 0)
 			(effects
 				(font
@@ -48174,7 +49156,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 589.28 110.7948 0)
 			(effects
 				(font
@@ -48242,7 +49224,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 238.76 0)
 			(effects
 				(font
@@ -48310,7 +49292,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 215.9 0)
 			(effects
 				(font
@@ -48378,7 +49360,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 124.46 0)
 			(effects
 				(font
@@ -48446,7 +49428,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 44.45 0)
 			(effects
 				(font
@@ -48514,7 +49496,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 204.47 0)
 			(effects
 				(font
@@ -48582,7 +49564,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 170.18 0)
 			(effects
 				(font
@@ -48650,7 +49632,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 124.46 0)
 			(effects
 				(font
@@ -48718,7 +49700,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 135.89 0)
 			(effects
 				(font
@@ -48786,7 +49768,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 250.19 0)
 			(effects
 				(font
@@ -48854,7 +49836,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 135.89 0)
 			(effects
 				(font
@@ -48987,7 +49969,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 158.75 0)
 			(effects
 				(font
@@ -49055,7 +50037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 90.17 0)
 			(effects
 				(font
@@ -49123,7 +50105,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 590.55 153.9748 0)
 			(effects
 				(font
@@ -49191,7 +50173,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 78.74 0)
 			(effects
 				(font
@@ -49259,7 +50241,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 193.04 0)
 			(effects
 				(font
@@ -49327,7 +50309,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 113.03 0)
 			(effects
 				(font
@@ -49395,7 +50377,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 113.03 0)
 			(effects
 				(font
@@ -49463,7 +50445,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 181.61 0)
 			(effects
 				(font
@@ -49597,7 +50579,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 193.04 0)
 			(effects
 				(font
@@ -49665,7 +50647,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 250.19 0)
 			(effects
 				(font
@@ -49733,7 +50715,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 215.9 0)
 			(effects
 				(font
@@ -49801,7 +50783,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 147.32 0)
 			(effects
 				(font
@@ -49869,7 +50851,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 124.46 0)
 			(effects
 				(font
@@ -49937,7 +50919,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 477.52 141.9352 0)
 			(effects
 				(font
@@ -50005,7 +50987,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 261.62 0)
 			(effects
 				(font
@@ -50073,7 +51055,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 238.76 0)
 			(effects
 				(font
@@ -50141,7 +51123,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 227.33 0)
 			(effects
 				(font
@@ -50209,7 +51191,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 181.61 0)
 			(effects
 				(font
@@ -50277,7 +51259,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 193.04 0)
 			(effects
 				(font
@@ -50344,7 +51326,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 158.75 0)
 			(effects
 				(font
@@ -50412,7 +51394,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 250.19 0)
 			(effects
 				(font
@@ -50480,7 +51462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 273.05 0)
 			(effects
 				(font
@@ -50548,7 +51530,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 261.62 0)
 			(effects
 				(font
@@ -50616,7 +51598,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 238.76 0)
 			(effects
 				(font
@@ -50684,7 +51666,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 250.19 0)
 			(effects
 				(font
@@ -50752,7 +51734,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 227.33 0)
 			(effects
 				(font
@@ -50820,7 +51802,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 639.7752 163.83 0)
 			(effects
 				(font
@@ -50888,7 +51870,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 204.47 0)
 			(effects
 				(font
@@ -50956,7 +51938,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 113.03 0)
 			(effects
 				(font
@@ -51089,7 +52071,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 215.9 0)
 			(effects
 				(font
@@ -51157,7 +52139,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 44.45 0)
 			(effects
 				(font
@@ -51225,7 +52207,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 78.74 0)
 			(effects
 				(font
@@ -51293,7 +52275,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 135.89 0)
 			(effects
 				(font
@@ -51361,7 +52343,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 124.46 0)
 			(effects
 				(font
@@ -51428,7 +52410,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 158.75 0)
 			(effects
 				(font
@@ -51496,7 +52478,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 250.19 0)
 			(effects
 				(font
@@ -51564,7 +52546,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 227.33 0)
 			(effects
 				(font
@@ -51632,7 +52614,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 215.9 0)
 			(effects
 				(font
@@ -51700,7 +52682,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 193.04 0)
 			(effects
 				(font
@@ -51768,7 +52750,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 78.74 0)
 			(effects
 				(font
@@ -51836,7 +52818,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 124.46 0)
 			(effects
 				(font
@@ -51879,6 +52861,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 524.51 227.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67a52623-9c8f-4943-92f5-72f210e6bfa2")
+		(property "Reference" "SW1"
+			(at 524.51 229.108 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 524.51 231.648 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyFootprints:SW_PTS647SM38SMTR2LFS_CNK"
+			(at 524.51 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 524.51 222.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 524.51 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3565d797-95ae-4f7c-9407-a4ffa7c49318")
+		)
+		(pin "2"
+			(uuid "77c5b00e-653a-4ee2-92d4-e0554142ca6b")
+		)
+		(instances
+			(project ""
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1037.59 135.89 0)
 		(unit 1)
@@ -51904,7 +52953,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 135.89 0)
 			(effects
 				(font
@@ -51972,7 +53021,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 181.61 0)
 			(effects
 				(font
@@ -52040,7 +53089,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 181.61 0)
 			(effects
 				(font
@@ -52108,7 +53157,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 250.19 0)
 			(effects
 				(font
@@ -52176,7 +53225,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 227.33 0)
 			(effects
 				(font
@@ -52244,7 +53293,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 124.46 0)
 			(effects
 				(font
@@ -52312,7 +53361,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 67.31 0)
 			(effects
 				(font
@@ -52380,7 +53429,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 227.33 0)
 			(effects
 				(font
@@ -52448,7 +53497,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 193.04 0)
 			(effects
 				(font
@@ -52516,7 +53565,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 101.6 0)
 			(effects
 				(font
@@ -52559,6 +53608,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 514.35 255.27 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6addab84-a533-42dc-9130-fea05315aacb")
+		(property "Reference" "R8"
+			(at 516.382 255.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 511.81 255.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 512.572 255.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 514.35 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 514.35 255.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c9c695b-38a3-4a66-aee5-c068671ca214")
+		)
+		(pin "2"
+			(uuid "bcd12dc6-5a2a-4830-bb7d-251afb27db3a")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 869.95 124.46 0)
 		(unit 1)
@@ -52584,7 +53701,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 124.46 0)
 			(effects
 				(font
@@ -52652,7 +53769,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 273.05 0)
 			(effects
 				(font
@@ -52720,7 +53837,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 135.89 0)
 			(effects
 				(font
@@ -52788,7 +53905,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 135.89 0)
 			(effects
 				(font
@@ -52856,7 +53973,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 67.31 0)
 			(effects
 				(font
@@ -52924,7 +54041,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 147.32 0)
 			(effects
 				(font
@@ -52992,7 +54109,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 67.31 0)
 			(effects
 				(font
@@ -53060,7 +54177,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 273.05 0)
 			(effects
 				(font
@@ -53128,7 +54245,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 55.88 0)
 			(effects
 				(font
@@ -53196,7 +54313,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 227.33 0)
 			(effects
 				(font
@@ -53264,7 +54381,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 113.03 0)
 			(effects
 				(font
@@ -53332,7 +54449,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 147.32 0)
 			(effects
 				(font
@@ -53400,7 +54517,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 101.6 0)
 			(effects
 				(font
@@ -53468,7 +54585,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 284.48 0)
 			(effects
 				(font
@@ -53536,7 +54653,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 90.17 0)
 			(effects
 				(font
@@ -53604,7 +54721,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 284.48 0)
 			(effects
 				(font
@@ -53672,7 +54789,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 215.9 0)
 			(effects
 				(font
@@ -53740,7 +54857,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 181.61 0)
 			(effects
 				(font
@@ -53808,7 +54925,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 101.6 0)
 			(effects
 				(font
@@ -53876,7 +54993,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 78.74 0)
 			(effects
 				(font
@@ -53944,7 +55061,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 273.05 0)
 			(effects
 				(font
@@ -54012,7 +55129,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 90.17 0)
 			(effects
 				(font
@@ -54080,7 +55197,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 170.18 0)
 			(effects
 				(font
@@ -54148,7 +55265,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 227.33 0)
 			(effects
 				(font
@@ -54216,7 +55333,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 90.17 0)
 			(effects
 				(font
@@ -54351,7 +55468,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 284.48 0)
 			(effects
 				(font
@@ -54419,7 +55536,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 204.47 0)
 			(effects
 				(font
@@ -54487,7 +55604,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 67.31 0)
 			(effects
 				(font
@@ -54555,7 +55672,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 181.61 0)
 			(effects
 				(font
@@ -54623,7 +55740,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 284.48 0)
 			(effects
 				(font
@@ -54691,7 +55808,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 147.32 0)
 			(effects
 				(font
@@ -54759,7 +55876,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 44.45 0)
 			(effects
 				(font
@@ -54827,7 +55944,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 181.61 0)
 			(effects
 				(font
@@ -54895,7 +56012,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 147.32 0)
 			(effects
 				(font
@@ -54963,7 +56080,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 124.46 0)
 			(effects
 				(font
@@ -55031,7 +56148,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 204.47 0)
 			(effects
 				(font
@@ -55099,7 +56216,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 204.47 0)
 			(effects
 				(font
@@ -55167,7 +56284,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 55.88 0)
 			(effects
 				(font
@@ -55235,7 +56352,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 44.45 0)
 			(effects
 				(font
@@ -55303,7 +56420,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 284.48 0)
 			(effects
 				(font
@@ -55371,7 +56488,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 238.76 0)
 			(effects
 				(font
@@ -55439,7 +56556,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 78.74 0)
 			(effects
 				(font
@@ -55507,7 +56624,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 67.31 0)
 			(effects
 				(font
@@ -55575,7 +56692,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 44.45 0)
 			(effects
 				(font
@@ -55643,7 +56760,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 78.74 0)
 			(effects
 				(font
@@ -55711,7 +56828,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 124.46 0)
 			(effects
 				(font
@@ -55779,7 +56896,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 67.31 0)
 			(effects
 				(font
@@ -55847,7 +56964,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 204.47 0)
 			(effects
 				(font
@@ -55915,7 +57032,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 170.18 0)
 			(effects
 				(font
@@ -55983,7 +57100,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 170.18 0)
 			(effects
 				(font
@@ -56026,77 +57143,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MySymbols:CapacitiveTouch")
-		(at 520.7 238.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "84f7773b-219e-4c18-bbbd-ec40d99e7228")
-		(property "Reference" "U5"
-			(at 525.78 231.7749 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "~"
-			(at 525.78 233.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 520.7 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 520.7 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 520.7 238.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "89147cb8-4461-48dc-90be-2f1e58400eb1")
-		)
-		(pin "1"
-			(uuid "7f10b9f5-00c9-4478-918c-1ad2bd5b5e89")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 1065.53 90.17 0)
 		(unit 1)
@@ -56122,7 +57168,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 90.17 0)
 			(effects
 				(font
@@ -56190,7 +57236,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 284.48 0)
 			(effects
 				(font
@@ -56324,7 +57370,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 215.9 0)
 			(effects
 				(font
@@ -56367,6 +57413,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 524.51 240.03 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "87247536-838b-4b6c-90b7-33177dcd8ba0")
+		(property "Reference" "SW2"
+			(at 524.51 241.808 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 524.51 244.348 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyFootprints:SW_PTS647SM38SMTR2LFS_CNK"
+			(at 524.51 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 524.51 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 524.51 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a312fbc-0602-46e5-8a77-b61fd61a24b1")
+		)
+		(pin "2"
+			(uuid "6b7f2a37-1760-462b-866e-b1f1ad557a91")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 800.1 250.19 0)
 		(unit 1)
@@ -56392,7 +57505,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 250.19 0)
 			(effects
 				(font
@@ -56460,7 +57573,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 238.76 0)
 			(effects
 				(font
@@ -56528,7 +57641,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 261.62 0)
 			(effects
 				(font
@@ -56571,77 +57684,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MySymbols:CapacitiveTouch")
-		(at 520.7 257.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "87c03bff-c420-4c62-b974-703522fbfd0d")
-		(property "Reference" "U7"
-			(at 525.78 250.8249 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "~"
-			(at 525.78 252.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 520.7 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 520.7 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 520.7 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "866dace6-abe8-4275-907f-8e1883cb54b9")
-		)
-		(pin "1"
-			(uuid "68240f8e-764a-4280-b4f4-cd5fa2f482a7")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 939.8 113.03 0)
 		(unit 1)
@@ -56667,7 +57709,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 113.03 0)
 			(effects
 				(font
@@ -56735,7 +57777,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 250.19 0)
 			(effects
 				(font
@@ -56778,6 +57820,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 524.51 251.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "88d75113-25f4-41e4-bc29-c0c938c84244")
+		(property "Reference" "SW3"
+			(at 524.51 253.238 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 524.51 255.778 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyFootprints:SW_PTS647SM38SMTR2LFS_CNK"
+			(at 524.51 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 524.51 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 524.51 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f196aa7-33a0-48b2-824b-2a6c809e5bd0")
+		)
+		(pin "2"
+			(uuid "f795e6fb-7d94-44b7-802f-d7c2e76893ea")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 953.77 284.48 0)
 		(unit 1)
@@ -56803,7 +57912,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 284.48 0)
 			(effects
 				(font
@@ -56871,7 +57980,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 193.04 0)
 			(effects
 				(font
@@ -56939,7 +58048,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 44.45 0)
 			(effects
 				(font
@@ -57007,7 +58116,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 204.47 0)
 			(effects
 				(font
@@ -57075,7 +58184,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 147.32 0)
 			(effects
 				(font
@@ -57143,7 +58252,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 273.05 0)
 			(effects
 				(font
@@ -57211,7 +58320,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 90.17 0)
 			(effects
 				(font
@@ -57279,7 +58388,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 238.76 0)
 			(effects
 				(font
@@ -57322,6 +58431,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 514.35 293.37 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8b86256f-74ef-478f-b67f-c08e520cffde")
+		(property "Reference" "R11"
+			(at 516.382 293.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 511.81 293.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 512.572 293.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 514.35 293.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 514.35 293.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "358117ba-cdc9-4095-8eab-a40eee39de3f")
+		)
+		(pin "2"
+			(uuid "be6c9655-74b8-4b93-ad7d-63651e6b3047")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1065.53 124.46 0)
 		(unit 1)
@@ -57347,7 +58524,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 124.46 0)
 			(effects
 				(font
@@ -57415,7 +58592,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 250.19 0)
 			(effects
 				(font
@@ -57483,7 +58660,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 273.05 0)
 			(effects
 				(font
@@ -57551,7 +58728,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 589.28 140.0048 0)
 			(effects
 				(font
@@ -57619,7 +58796,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 204.47 0)
 			(effects
 				(font
@@ -57687,7 +58864,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 181.61 0)
 			(effects
 				(font
@@ -57730,6 +58907,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 514.35 267.97 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "905ce62c-243d-4516-9081-6fd7eb280d5f")
+		(property "Reference" "R7"
+			(at 516.382 267.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 511.81 267.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 512.572 267.97 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 514.35 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 514.35 267.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c32b6b2-5e6b-437b-ba0b-e1d5580edd2a")
+		)
+		(pin "2"
+			(uuid "0e102bcd-dca1-442f-b7dc-83129a0d8a68")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 995.68 158.75 0)
 		(unit 1)
@@ -57754,7 +58999,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 158.75 0)
 			(effects
 				(font
@@ -57822,7 +59067,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 181.61 0)
 			(effects
 				(font
@@ -57890,7 +59135,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 78.74 0)
 			(effects
 				(font
@@ -58024,7 +59269,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 204.47 0)
 			(effects
 				(font
@@ -58092,7 +59337,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 44.45 0)
 			(effects
 				(font
@@ -58160,7 +59405,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 113.03 0)
 			(effects
 				(font
@@ -58228,7 +59473,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 113.03 0)
 			(effects
 				(font
@@ -58296,7 +59541,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 101.6 0)
 			(effects
 				(font
@@ -58364,7 +59609,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 204.47 0)
 			(effects
 				(font
@@ -58432,7 +59677,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 135.89 0)
 			(effects
 				(font
@@ -58500,7 +59745,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 238.76 0)
 			(effects
 				(font
@@ -58568,7 +59813,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 90.17 0)
 			(effects
 				(font
@@ -58636,7 +59881,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 147.32 0)
 			(effects
 				(font
@@ -58704,7 +59949,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 637.54 208.5848 0)
 			(effects
 				(font
@@ -58772,7 +60017,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 261.62 0)
 			(effects
 				(font
@@ -58840,7 +60085,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 284.48 0)
 			(effects
 				(font
@@ -58908,7 +60153,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 227.33 0)
 			(effects
 				(font
@@ -58976,7 +60221,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 170.18 0)
 			(effects
 				(font
@@ -59044,7 +60289,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 55.88 0)
 			(effects
 				(font
@@ -59112,7 +60357,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 147.32 0)
 			(effects
 				(font
@@ -59180,7 +60425,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 170.18 0)
 			(effects
 				(font
@@ -59248,7 +60493,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 90.17 0)
 			(effects
 				(font
@@ -59316,7 +60561,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 250.19 0)
 			(effects
 				(font
@@ -59384,7 +60629,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 55.88 0)
 			(effects
 				(font
@@ -59452,7 +60697,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 147.32 0)
 			(effects
 				(font
@@ -59520,7 +60765,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 227.33 0)
 			(effects
 				(font
@@ -59588,7 +60833,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 181.61 0)
 			(effects
 				(font
@@ -59656,7 +60901,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 227.33 0)
 			(effects
 				(font
@@ -59724,7 +60969,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 55.88 0)
 			(effects
 				(font
@@ -59767,77 +61012,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MySymbols:CapacitiveTouch")
-		(at 520.7 267.97 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a124e848-c4c3-4d55-a93e-dfe06696acf5")
-		(property "Reference" "U8"
-			(at 525.78 260.9849 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "~"
-			(at 525.78 262.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 520.7 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 520.7 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 520.7 267.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "8de8e1a3-cbd5-4ed6-8bd4-c35f60ed255a")
-		)
-		(pin "1"
-			(uuid "0e788857-c6b7-497c-9512-1d91d937a9c4")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "U8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 953.77 261.62 0)
 		(unit 1)
@@ -59863,7 +61037,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 261.62 0)
 			(effects
 				(font
@@ -59931,7 +61105,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 135.89 0)
 			(effects
 				(font
@@ -59974,6 +61148,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 534.67 289.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a2c9fc8d-5c15-4dd6-b8bd-a1d067ccf541")
+		(property "Reference" "#PWR022"
+			(at 541.02 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 538.48 289.5599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 534.67 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf9d391f-522f-4e64-954e-9257c19beaa3")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1037.59 158.75 0)
 		(unit 1)
@@ -59998,7 +61239,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 158.75 0)
 			(effects
 				(font
@@ -60066,7 +61307,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 147.32 0)
 			(effects
 				(font
@@ -60134,7 +61375,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 113.03 0)
 			(effects
 				(font
@@ -60202,7 +61443,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 215.9 0)
 			(effects
 				(font
@@ -60270,7 +61511,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 113.03 0)
 			(effects
 				(font
@@ -60338,7 +61579,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 469.9 153.9748 0)
 			(effects
 				(font
@@ -60406,7 +61647,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 273.05 0)
 			(effects
 				(font
@@ -60474,7 +61715,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 273.05 0)
 			(effects
 				(font
@@ -60542,7 +61783,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 261.62 0)
 			(effects
 				(font
@@ -60610,7 +61851,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 204.47 0)
 			(effects
 				(font
@@ -60744,7 +61985,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 227.33 0)
 			(effects
 				(font
@@ -60812,7 +62053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 215.9 0)
 			(effects
 				(font
@@ -60880,7 +62121,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 44.45 0)
 			(effects
 				(font
@@ -60947,7 +62188,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 614.3752 100.33 0)
 			(effects
 				(font
@@ -61015,7 +62256,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 135.89 0)
 			(effects
 				(font
@@ -61083,7 +62324,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 124.46 0)
 			(effects
 				(font
@@ -61151,7 +62392,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 67.31 0)
 			(effects
 				(font
@@ -61218,7 +62459,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 158.75 0)
 			(effects
 				(font
@@ -61286,7 +62527,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 67.31 0)
 			(effects
 				(font
@@ -61354,7 +62595,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 193.04 0)
 			(effects
 				(font
@@ -61422,7 +62663,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 44.45 0)
 			(effects
 				(font
@@ -61490,7 +62731,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 250.19 0)
 			(effects
 				(font
@@ -61558,7 +62799,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 78.74 0)
 			(effects
 				(font
@@ -61626,7 +62867,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 147.32 0)
 			(effects
 				(font
@@ -61675,7 +62916,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b19b7a59-3197-4d55-8e3b-bca3c814eb49")
 		(property "Reference" "BT1"
@@ -61764,7 +63005,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 101.6 0)
 			(effects
 				(font
@@ -61832,7 +63073,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 113.03 0)
 			(effects
 				(font
@@ -61900,7 +63141,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 250.19 0)
 			(effects
 				(font
@@ -61968,7 +63209,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 170.18 0)
 			(effects
 				(font
@@ -62102,7 +63343,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 78.74 0)
 			(effects
 				(font
@@ -62170,7 +63411,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 170.18 0)
 			(effects
 				(font
@@ -62238,7 +63479,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 135.89 0)
 			(effects
 				(font
@@ -62306,7 +63547,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 204.47 0)
 			(effects
 				(font
@@ -62349,77 +63590,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MySymbols:CapacitiveTouch")
-		(at 520.7 228.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b6609a2a-86e5-4a85-a2da-7ef23b358f38")
-		(property "Reference" "U4"
-			(at 525.78 221.6149 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "~"
-			(at 525.78 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 520.7 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 520.7 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 520.7 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "89967145-1fc0-468a-92f5-b2e8e8bfdb5e")
-		)
-		(pin "1"
-			(uuid "289b4816-0ba1-45db-a247-11410de8d969")
-		)
-		(instances
-			(project ""
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 1023.62 67.31 0)
 		(unit 1)
@@ -62445,7 +63615,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 67.31 0)
 			(effects
 				(font
@@ -62648,7 +63818,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 170.18 0)
 			(effects
 				(font
@@ -62784,7 +63954,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 90.17 0)
 			(effects
 				(font
@@ -62852,7 +64022,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 204.47 0)
 			(effects
 				(font
@@ -62919,7 +64089,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 158.75 0)
 			(effects
 				(font
@@ -62987,7 +64157,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 101.6 0)
 			(effects
 				(font
@@ -63055,7 +64225,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 67.31 0)
 			(effects
 				(font
@@ -63123,7 +64293,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 67.31 0)
 			(effects
 				(font
@@ -63191,7 +64361,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 238.76 0)
 			(effects
 				(font
@@ -63259,7 +64429,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 215.9 0)
 			(effects
 				(font
@@ -63327,7 +64497,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 284.48 0)
 			(effects
 				(font
@@ -63395,7 +64565,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 55.88 0)
 			(effects
 				(font
@@ -63463,7 +64633,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 147.32 0)
 			(effects
 				(font
@@ -63531,7 +64701,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 44.45 0)
 			(effects
 				(font
@@ -63599,7 +64769,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 181.61 0)
 			(effects
 				(font
@@ -63667,7 +64837,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 44.45 0)
 			(effects
 				(font
@@ -63735,7 +64905,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 250.19 0)
 			(effects
 				(font
@@ -63803,7 +64973,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 44.45 0)
 			(effects
 				(font
@@ -63871,7 +65041,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 67.31 0)
 			(effects
 				(font
@@ -63939,7 +65109,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 101.6 0)
 			(effects
 				(font
@@ -64007,7 +65177,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 170.18 0)
 			(effects
 				(font
@@ -64075,7 +65245,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 227.33 0)
 			(effects
 				(font
@@ -64143,7 +65313,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 55.88 0)
 			(effects
 				(font
@@ -64211,7 +65381,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 90.17 0)
 			(effects
 				(font
@@ -64279,7 +65449,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 238.76 0)
 			(effects
 				(font
@@ -64347,7 +65517,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 273.05 0)
 			(effects
 				(font
@@ -64415,7 +65585,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 576.58 176.8348 0)
 			(effects
 				(font
@@ -64483,7 +65653,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 227.33 0)
 			(effects
 				(font
@@ -64551,7 +65721,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 284.48 0)
 			(effects
 				(font
@@ -64618,7 +65788,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 158.75 0)
 			(effects
 				(font
@@ -64686,7 +65856,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 78.74 0)
 			(effects
 				(font
@@ -64754,7 +65924,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 55.88 0)
 			(effects
 				(font
@@ -64822,7 +65992,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 238.76 0)
 			(effects
 				(font
@@ -64890,7 +66060,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 101.6 0)
 			(effects
 				(font
@@ -64933,6 +66103,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 524.51 289.56 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ca03bb6c-f1f3-4e94-992c-e374d6ab3cb2")
+		(property "Reference" "SW6"
+			(at 524.51 291.338 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 524.51 293.878 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyFootprints:SW_PTS647SM38SMTR2LFS_CNK"
+			(at 524.51 284.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 524.51 284.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 524.51 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "785be692-6dbc-422a-b681-d19d45b119b3")
+		)
+		(pin "2"
+			(uuid "150dae2d-ddc4-4635-b3d9-ed87545d35c2")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "SW6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1009.65 158.75 0)
 		(unit 1)
@@ -64957,7 +66194,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 158.75 0)
 			(effects
 				(font
@@ -65068,6 +66305,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 514.35 243.84 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cba17785-5d56-416d-ab71-cd24da4326d7")
+		(property "Reference" "R9"
+			(at 516.382 243.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 511.81 243.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 512.572 243.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 514.35 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 514.35 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8d199267-0edc-48c7-a008-f5f85e7c7632")
+		)
+		(pin "2"
+			(uuid "bd58215a-2dfd-4e20-92f2-12937a7ed36a")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 842.01 124.46 0)
 		(unit 1)
@@ -65093,7 +66398,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 124.46 0)
 			(effects
 				(font
@@ -65161,7 +66466,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 67.31 0)
 			(effects
 				(font
@@ -65229,7 +66534,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 147.32 0)
 			(effects
 				(font
@@ -65297,7 +66602,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 44.45 0)
 			(effects
 				(font
@@ -65365,7 +66670,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 227.33 0)
 			(effects
 				(font
@@ -65433,7 +66738,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 124.46 0)
 			(effects
 				(font
@@ -65501,7 +66806,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 215.9 0)
 			(effects
 				(font
@@ -65569,7 +66874,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 78.74 0)
 			(effects
 				(font
@@ -65606,6 +66911,140 @@
 			(project "tetrisBusinessCard"
 				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
 					(reference "D80")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 534.67 276.86 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d0c64749-bd2b-432e-9d23-536efb361ad8")
+		(property "Reference" "#PWR021"
+			(at 541.02 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 538.48 276.8599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 534.67 276.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7c813f3-63b4-461b-85b6-bed1beca6129")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 534.67 240.03 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d109f2ff-3eda-4b32-a95e-60086f90869f")
+		(property "Reference" "#PWR018"
+			(at 541.02 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 538.48 240.0299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 534.67 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 534.67 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 534.67 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92ffebf5-c4de-45b5-a061-370934ac7ef6")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -65703,7 +67142,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 90.17 0)
 			(effects
 				(font
@@ -65771,7 +67210,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 250.19 0)
 			(effects
 				(font
@@ -65839,7 +67278,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 124.46 0)
 			(effects
 				(font
@@ -65907,7 +67346,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 55.88 0)
 			(effects
 				(font
@@ -65975,7 +67414,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 113.03 0)
 			(effects
 				(font
@@ -66043,7 +67482,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 124.46 0)
 			(effects
 				(font
@@ -66092,7 +67531,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d6f1afce-51d7-4963-b396-697cad707856")
 		(property "Reference" "SW7"
@@ -66193,7 +67632,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 576.58 185.7248 0)
 			(effects
 				(font
@@ -66261,7 +67700,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 113.03 0)
 			(effects
 				(font
@@ -66328,7 +67767,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 158.75 0)
 			(effects
 				(font
@@ -66396,7 +67835,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 113.03 0)
 			(effects
 				(font
@@ -66464,7 +67903,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 227.33 0)
 			(effects
 				(font
@@ -66532,7 +67971,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 170.18 0)
 			(effects
 				(font
@@ -66600,7 +68039,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 67.31 0)
 			(effects
 				(font
@@ -66668,7 +68107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 113.03 0)
 			(effects
 				(font
@@ -66736,7 +68175,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 193.04 0)
 			(effects
 				(font
@@ -66804,7 +68243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 238.76 0)
 			(effects
 				(font
@@ -66872,7 +68311,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 124.46 0)
 			(effects
 				(font
@@ -66940,7 +68379,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 261.62 0)
 			(effects
 				(font
@@ -67008,7 +68447,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 204.47 0)
 			(effects
 				(font
@@ -67076,7 +68515,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 284.48 0)
 			(effects
 				(font
@@ -67119,6 +68558,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 524.51 264.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "daa89a7e-beed-46f5-84bd-c794e3906525")
+		(property "Reference" "SW4"
+			(at 524.51 265.938 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 524.51 268.478 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MyFootprints:SW_PTS647SM38SMTR2LFS_CNK"
+			(at 524.51 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 524.51 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 524.51 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3273f69c-594a-4b3c-a386-ecf4d66113f9")
+		)
+		(pin "2"
+			(uuid "2a1a1283-b2d7-49fc-89bf-954f31b898a3")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1009.65 238.76 0)
 		(unit 1)
@@ -67144,7 +68650,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 238.76 0)
 			(effects
 				(font
@@ -67278,7 +68784,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 101.6 0)
 			(effects
 				(font
@@ -67346,7 +68852,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 261.62 0)
 			(effects
 				(font
@@ -67414,7 +68920,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1051.56 90.17 0)
 			(effects
 				(font
@@ -67457,77 +68963,6 @@
 		)
 	)
 	(symbol
-		(lib_id "MySymbols:CapacitiveTouch")
-		(at 520.7 278.13 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "de96c20b-02d4-4338-8027-d1b290ffc1e2")
-		(property "Reference" "U9"
-			(at 525.78 271.1449 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "~"
-			(at 525.78 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 520.7 278.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 520.7 278.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 520.7 278.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "16a55af6-8fc3-4c14-aac7-cfe28f517d57")
-		)
-		(pin "1"
-			(uuid "d19c2ac6-449f-46dc-b145-89c1696fd31e")
-		)
-		(instances
-			(project "tetrisBusinessCard"
-				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
-					(reference "U9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 869.95 147.32 0)
 		(unit 1)
@@ -67553,7 +68988,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 147.32 0)
 			(effects
 				(font
@@ -67621,7 +69056,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 204.47 0)
 			(effects
 				(font
@@ -67689,7 +69124,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 124.46 0)
 			(effects
 				(font
@@ -67824,7 +69259,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 135.89 0)
 			(effects
 				(font
@@ -67892,7 +69327,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 615.6452 163.83 0)
 			(effects
 				(font
@@ -67960,7 +69395,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 204.47 0)
 			(effects
 				(font
@@ -68028,7 +69463,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 147.32 0)
 			(effects
 				(font
@@ -68071,6 +69506,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 514.35 280.67 0)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e0d0faf8-c6d2-47b8-ba57-fb0421f7833d")
+		(property "Reference" "R6"
+			(at 516.382 280.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 511.81 280.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 512.572 280.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 514.35 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 514.35 280.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e739ceb8-7c1f-4003-90a7-6fe5c88d5d1a")
+		)
+		(pin "2"
+			(uuid "eb75d57b-9a98-4726-addd-ac6536ac1f0d")
+		)
+		(instances
+			(project "tetrisBusinessCard"
+				(path "/81723559-87f8-4451-b8c4-8c04cfdf45bf"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 1023.62 135.89 0)
 		(unit 1)
@@ -68096,7 +69599,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 135.89 0)
 			(effects
 				(font
@@ -68231,7 +69734,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 215.9 0)
 			(effects
 				(font
@@ -68299,7 +69802,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 90.17 0)
 			(effects
 				(font
@@ -68500,7 +70003,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 78.74 0)
 			(effects
 				(font
@@ -68568,7 +70071,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 215.9 0)
 			(effects
 				(font
@@ -68636,7 +70139,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1009.65 147.32 0)
 			(effects
 				(font
@@ -68704,7 +70207,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 101.6 0)
 			(effects
 				(font
@@ -68772,7 +70275,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 261.62 0)
 			(effects
 				(font
@@ -68840,7 +70343,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 204.47 0)
 			(effects
 				(font
@@ -68908,7 +70411,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 284.48 0)
 			(effects
 				(font
@@ -68976,7 +70479,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 78.74 0)
 			(effects
 				(font
@@ -69044,7 +70547,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1065.53 135.89 0)
 			(effects
 				(font
@@ -69112,7 +70615,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 215.9 0)
 			(effects
 				(font
@@ -69247,7 +70750,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 113.03 0)
 			(effects
 				(font
@@ -69315,7 +70818,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 147.32 0)
 			(effects
 				(font
@@ -69383,7 +70886,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 67.31 0)
 			(effects
 				(font
@@ -69451,7 +70954,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 261.62 0)
 			(effects
 				(font
@@ -69519,7 +71022,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 147.32 0)
 			(effects
 				(font
@@ -69654,7 +71157,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 273.05 0)
 			(effects
 				(font
@@ -69722,7 +71225,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 78.74 0)
 			(effects
 				(font
@@ -69790,7 +71293,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 193.04 0)
 			(effects
 				(font
@@ -69858,7 +71361,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 842.01 67.31 0)
 			(effects
 				(font
@@ -69925,7 +71428,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 158.75 0)
 			(effects
 				(font
@@ -69993,7 +71496,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 90.17 0)
 			(effects
 				(font
@@ -70061,7 +71564,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 124.46 0)
 			(effects
 				(font
@@ -70129,7 +71632,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 261.62 0)
 			(effects
 				(font
@@ -70196,7 +71699,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 158.75 0)
 			(effects
 				(font
@@ -70264,7 +71767,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 469.9 180.6448 0)
 			(effects
 				(font
@@ -70332,7 +71835,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 995.68 193.04 0)
 			(effects
 				(font
@@ -70400,7 +71903,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 238.76 0)
 			(effects
 				(font
@@ -70468,7 +71971,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1037.59 273.05 0)
 			(effects
 				(font
@@ -70536,7 +72039,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 181.61 0)
 			(effects
 				(font
@@ -70604,7 +72107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 953.77 78.74 0)
 			(effects
 				(font
@@ -70672,7 +72175,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 44.45 0)
 			(effects
 				(font
@@ -70740,7 +72243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 101.6 0)
 			(effects
 				(font
@@ -70807,7 +72310,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 883.92 158.75 0)
 			(effects
 				(font
@@ -70875,7 +72378,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 238.76 0)
 			(effects
 				(font
@@ -70943,7 +72446,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 227.33 0)
 			(effects
 				(font
@@ -71011,7 +72514,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 238.76 0)
 			(effects
 				(font
@@ -71079,7 +72582,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1079.5 90.17 0)
 			(effects
 				(font
@@ -71147,7 +72650,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 124.46 0)
 			(effects
 				(font
@@ -71297,7 +72800,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 90.17 0)
 			(effects
 				(font
@@ -71365,7 +72868,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 855.98 181.61 0)
 			(effects
 				(font
@@ -71433,7 +72936,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 939.8 147.32 0)
 			(effects
 				(font
@@ -71501,7 +73004,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 78.74 0)
 			(effects
 				(font
@@ -71569,7 +73072,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 589.28 119.6848 0)
 			(effects
 				(font
@@ -71637,7 +73140,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 101.6 0)
 			(effects
 				(font
@@ -71705,7 +73208,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 897.89 101.6 0)
 			(effects
 				(font
@@ -71773,7 +73276,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 170.18 0)
 			(effects
 				(font
@@ -71841,7 +73344,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 1023.62 273.05 0)
 			(effects
 				(font
@@ -71909,7 +73412,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 204.47 0)
 			(effects
 				(font
@@ -71976,7 +73479,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 800.1 158.75 0)
 			(effects
 				(font
@@ -72044,7 +73547,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 786.13 135.89 0)
 			(effects
 				(font
@@ -72112,7 +73615,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 828.04 170.18 0)
 			(effects
 				(font
@@ -72180,7 +73683,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 967.74 55.88 0)
 			(effects
 				(font
@@ -72318,7 +73821,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 911.86 238.76 0)
 			(effects
 				(font
@@ -72386,7 +73889,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 925.83 250.19 0)
 			(effects
 				(font
@@ -72454,7 +73957,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 869.95 273.05 0)
 			(effects
 				(font
@@ -72589,7 +74092,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 814.07 78.74 0)
 			(effects
 				(font
@@ -72657,7 +74160,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric"
+		(property "Footprint" "MyFootprints:LED_0603_1608MetricAdjusted"
 			(at 981.71 284.48 0)
 			(effects
 				(font
