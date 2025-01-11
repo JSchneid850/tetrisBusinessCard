@@ -20,9 +20,9 @@ class charlieplexDriver
         }
 
         //once rev 0.3 is done and I've flipped the led matrix to scan vertically this code will be removed and subsequently burned 
-        int rotateFrameArray(std::vector<uint32_t> &frames){
+        void rotateFrameArray(uint32_t[][] &frames){
             int size = frames.size();
-            std::vector<uint32_t> result(size, 0);
+            uint32_t[21][21] result;
             
             for(int i = 0; i < size; i++){
                 for(int j=0; j < size; j++){
@@ -32,7 +32,14 @@ class charlieplexDriver
                 }
             } 
             frames = result;
-            return 1;
+        }
+
+        std::vector<uint32_t>* compressArray(uint32_t[][] &frames){
+            int size = frames.size();
+            std::vector<uint32_t> ret(size);
+            for(int pos = 0; pos<size-1; pos++){
+                
+            }
         }
         
     public:
@@ -42,9 +49,10 @@ class charlieplexDriver
             gpio_init_mask(GPIOMask);
         }
 
-        void writeFrame(std::vector<uint32_t> &frames){
+        void writeFrame(uint32_t[][] &frames){
             uint32_t framebuff;
             rotateFrameArray(frames);
+
             for(uint32_t i = 0u; i < 21u; i++){
                 framebuff = expandRow(frames[i]<<2, i);// shift framebuff to account for pins 1 and 2 in rev0.2 being used for uart debugging
 
