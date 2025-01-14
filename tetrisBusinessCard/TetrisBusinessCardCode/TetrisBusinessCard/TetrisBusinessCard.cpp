@@ -11,7 +11,8 @@ const uint32_t GPIOMask =  0x2FFFFFF;
 
 int main() {
     charlieplexDriver driver;
-    std::vector<uint32_t> test = {1u, 0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u,0u,0u,0u,0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u, 0u };
+    bool test[21][21] = {0u};
+    test[0][0] = 1u;
     while(true){
     driver.writeFrame(test);
     }

@@ -9,8 +9,9 @@ class charlieplexDriver
         uint32_t LED_PIN_COUNT = 22;
         uint32_t LEDMask = 0xFFFFFF;
         uint32_t GPIOMask =  0xFFFFFFF;
+        static bool rotateResult[21][21];
+        static uint32_t frameArray[21]; // a frame with bitmasks equal to vertical bitmask (Will be horizontal bitmask in hardware rev 0.3)
 
-        //need to add index as param for inserting low bit
         uint32_t expandRow(uint32_t row, uint32_t rowIndex){
             uint32_t shift = (row << 1u);
             uint32_t rightMask = ~(1u << rowIndex);
@@ -20,25 +21,22 @@ class charlieplexDriver
         }
 
         //once rev 0.3 is done and I've flipped the led matrix to scan vertically this code will be removed and subsequently burned 
-        void rotateFrameArray(uint32_t[][] &frames){
-            int size = frames.size();
-            uint32_t[21][21] result;
-            
-            for(int i = 0; i < size; i++){
-                for(int j=0; j < size; j++){
-                    if(frames[i] & (1<<j)){// if the j'th bit is set in our original value
-                        result[size - j - 1] + 1u<<j;
-                    }
+        void rotateFrameArray(bool (&frame)[21][21]){
+            for(int i = 0; i < 21; i++){
+                for(int j=0; j < 21; j++){
+                    rotateResult[21-j-1][i]= frame[i][j];
                 }
             } 
-            frames = result;
         }
 
-        std::vector<uint32_t>* compressArray(uint32_t[][] &frames){
-            int size = frames.size();
-            std::vector<uint32_t> ret(size);
-            for(int pos = 0; pos<size-1; pos++){
-                
+        //funnily enough we can deal with bool's up to this point, should make it easier to write games just by dealing with an array of on's and off's
+        void compressFrameArray(bool (&frame)[21][21]){
+            for(int i = 0; i < 21; i++){
+                frameArray[i] = 0u;//reset frame array from last call
+                for(int j = 0; j < 21; j++){
+                    if (frame)
+                    frameArray[i] = frameArray[i] + 1u << j;
+                }
             }
         }
         
@@ -49,17 +47,18 @@ class charlieplexDriver
             gpio_init_mask(GPIOMask);
         }
 
-        void writeFrame(uint32_t[][] &frames){
+        void writeFrame(bool (&frames)[21][21]){
             uint32_t framebuff;
             rotateFrameArray(frames);
-
+            compressFrameArray(rotateResult);
             for(uint32_t i = 0u; i < 21u; i++){
-                framebuff = expandRow(frames[i]<<2, i);// shift framebuff to account for pins 1 and 2 in rev0.2 being used for uart debugging
+                framebuff = expandRow(frameArray[i]<<2, i);// shift framebuff to account for pins 1 and 2 in rev0.2+ being used for uart debugging
 
                 gpio_set_dir_in_masked(~(framebuff | 1u<<i)); 
                 gpio_set_dir_out_masked(framebuff | 1u<<i);
 
-                //double check what put masked needs to be here
+                //double check what put masked needs to be here 
+                //1/14/25: this should be fine but need to check row logic since row 0 and 1 may be flipped
                 gpio_put_masked(framebuff | 1u<<i, framebuff);
                 framebuff = 0;
             }
