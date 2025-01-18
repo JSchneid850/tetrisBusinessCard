@@ -5,6 +5,7 @@ cmake_minimum_required(VERSION 3.13)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+#set(CMAKE_CXX_FLAGS "-g")
 
 # Initialise pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
@@ -15,10 +16,9 @@ if(WIN32)
 else()
     set(USERHOME $ENV{HOME})
 endif()
-#this could be needed, will test without and confirm
-#set(sdkVersion 2.0.0)
-#set(toolchainVersion 13_2_Rel1)
-#set(picotoolVersion 2.0.0)
+set(sdkVersion 2.0.0)
+set(toolchainVersion 13_2_Rel1)
+set(picotoolVersion 2.0.0)
 set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
 if (EXISTS ${picoVscode})
     include(${picoVscode})
@@ -48,9 +48,12 @@ target_link_libraries(TetrisBusinessCard
 # Add the standard include files to the build
 target_include_directories(TetrisBusinessCard PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}
+
+pico_enable_stdio_usb(${PROJECT} 1)
+pico_enable_stdio_uart(${PROJECT} 0)
 )
 
-pico_set_binary_type(TetrisBusinessCard no_flash)
+#pico_set_binary_type(TetrisBusinessCard no_flash)
 
 pico_add_extra_outputs(TetrisBusinessCard)
 

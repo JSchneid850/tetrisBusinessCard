@@ -7,12 +7,24 @@ const uint32_t LED_PIN_COUNT = 22;
 const uint32_t LEDMask = 0x3FFFFF;
 const uint32_t GPIOMask =  0x2FFFFFF;
 
+#define UART_ID uart0
+#define BAUD_RATE 115200
 
-
+#define UART_TX_PIN 0
+#define UART_RX_PIN 1
+void uartInit(){
+    gpio_set_function(UART_TX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_TX_PIN));
+    gpio_set_function(UART_RX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_RX_PIN));
+    uart_init(UART_ID, BAUD_RATE);
+}
 int main() {
     charlieplexDriver driver;
-    bool test[21][21] = {0u};
-    test[0][0] = 1u;
+    uartInit();
+    bool test[21][20] = {false};
+    test[0][0] = true;
+    test[20][19] = true;
+    test[0][19] = true;
+    test[20][0] = true;
     while(true){
     driver.writeFrame(test);
     }
