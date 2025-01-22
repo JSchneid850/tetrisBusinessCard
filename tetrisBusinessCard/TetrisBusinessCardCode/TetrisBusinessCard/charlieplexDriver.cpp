@@ -32,15 +32,6 @@ class charlieplexDriver
             }
         }
 
-        void printArrayState(bool (&frame)[21][20]){
-            for (int i = 0; i <= 21; ++i) {
-                for (int j = 0; j <= 20; ++j) {
-                std::cout << frame[i][j] << " ";
-            }
-            std::cout << std::endl;
-            }   
-        }
-
         void printFrameArray(){
             for(int i = 0; i < 21; ++i){
                 std::cout<< frameArray[i]<<std::endl;
