@@ -1,13 +1,17 @@
 #include <array>
 #include <iostream>
 #include <random>
+#include <ctime>
 
 class Shape {
     public:
-        static const std::array<std::array<std::array<bool, 4>, 4>, 7> tetrominoes;
+        int posX;
+        int posY;
 
-        Shape(int shapeChoice) {
-            shape = tetrominoes.at(shapeChoice);
+        Shape() {
+            static std::mt19937 rng(static_cast<unsigned>(std::time(nullptr)));
+            std::uniform_int_distribution<int> dist(0,6);
+            shape = tetrominoes.at(dist(rng));
         }
 
         void rotateClockwise(){
@@ -37,6 +41,7 @@ class Shape {
         
     private:
         std::array<std::array<bool, 4>, 4> shape;
+        static const std::array<std::array<std::array<bool, 4>, 4>, 7> tetrominoes;
 
 };
 
