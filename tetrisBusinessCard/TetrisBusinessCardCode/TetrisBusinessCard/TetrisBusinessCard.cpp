@@ -2,6 +2,8 @@
 #include <cstring>
 #include "pico/stdlib.h"
 #include "charlieplexDriver.cpp"
+#include "shape.cpp"
+#include "playfield.cpp"
 
 const uint32_t GPIO_PIN_COUNT = 27;
 const uint32_t LED_PIN_COUNT = 22;
@@ -13,11 +15,14 @@ const uint32_t GPIOMask =  0x2FFFFFF;
 
 #define UART_TX_PIN 0
 #define UART_RX_PIN 1
+
+Shape startingShape;
+Playfield field(&startingShape);
+
 void uartInit(){
     gpio_set_function(UART_TX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_TX_PIN));
     gpio_set_function(UART_RX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_RX_PIN));
-    uart_init(UART_ID, BAUD_RATE);
-}
+    uart_init(UART_ID, BAUD_RATE);}
 
 void testPatterns(charlieplexDriver &driver) {
     // Pattern 1: All Off
@@ -85,9 +90,12 @@ void testPatterns(charlieplexDriver &driver) {
     }
 }
 
+void stepGame() {
+
+}
+
 int main() {
     charlieplexDriver driver;
     uartInit();
-    testPatterns(driver);
-
+    //testPatterns(driver);
 }

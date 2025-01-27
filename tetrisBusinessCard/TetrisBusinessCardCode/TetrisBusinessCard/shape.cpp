@@ -5,9 +5,6 @@
 
 class Shape {
     public:
-        int posX;
-        int posY;
-
         Shape() {
             static std::mt19937 rng(static_cast<unsigned>(std::time(nullptr)));
             std::uniform_int_distribution<int> dist(0,6);
@@ -27,12 +24,20 @@ class Shape {
 
         void rotateCounterClockwise(){
             std::array<std::array<bool,4>,4> rotatedCC;
-            for(int i = 0; i< 4; ++i){
-                for(int j = 0; j<4; ++j){
+            for(int i = 0; i < 4; ++i){
+                for(int j = 0; j < 4; ++j){
                     rotatedCC[3-j][i] = shape[i][j];
                 }
             }
             shape = rotatedCC;
+        }
+
+        void updatePos(std::pair<int,int> newPos){
+            this->pos = newPos;
+        }
+
+        std::pair<int,int> getPos(){
+            return pos;
         }
 
         std::array<std::array<bool,4>, 4> getShape(){
@@ -40,59 +45,58 @@ class Shape {
         }
         
     private:
+        std::pair<int, int> pos {0,0};
         std::array<std::array<bool, 4>, 4> shape;
-        static const std::array<std::array<std::array<bool, 4>, 4>, 7> tetrominoes;
+        static constexpr std::array<std::array<std::array<bool, 4>, 4>, 7> tetrominoes= {{
+        // I Shape
+        {{
+            {false, false, false, false},
+            {true,  true,  true,  true},
+            {false, false, false, false},
+            {false, false, false, false}
+        }},
+        // O Shape
+        {{
+            {false, false, false, false},
+            {false, true,  true,  false},
+            {false, true,  true,  false},
+            {false, false, false, false}
+        }},
+        // T Shape
+        {{
+            {false, false, false, false},
+            {false, true,  true,  true },
+            {false, false, true,  false},
+            {false, false, false, false}
+        }},
+        // S Shape
+        {{
+            {false, false, false, false},
+            {false, false, true,  true },
+            {false, true,  true,  false},
+            {false, false, false, false}
+        }},
+        // Z Shape
+        {{
+            {false, false, false, false},
+            {false, true,  true,  false},
+            {false, false, true,  true },
+            {false, false, false, false}
+        }},
+        // J Shape
+        {{
+            {false, false, false, false},
+            {false, true,  false, false},
+            {false, true,  true,  true },
+            {false, false, false, false}
+        }},
+        // L Shape
+        {{
+            {false, false, false, false},
+            {false, false, false, true },
+            {false, true,  true,  true },
+            {false, false, false, false}
+        }},
+    }};
 
 };
-
-const std::array<std::array<std::array<bool, 4>, 4>, 7> Shape::tetrominoes = {{
-    // I Shape
-    {{
-        {false, false, false, false},
-        {true,  true,  true,  true},
-        {false, false, false, false},
-        {false, false, false, false}
-    }},
-    // O Shape
-    {{
-        {false, false, false, false},
-        {false, true,  true,  false},
-        {false, true,  true,  false},
-        {false, false, false, false}
-    }},
-    // T Shape
-    {{
-        {false, false, false, false},
-        {false, true,  true,  true },
-        {false, false, true,  false},
-        {false, false, false, false}
-    }},
-    // S Shape
-    {{
-        {false, false, false, false},
-        {false, false, true,  true },
-        {false, true,  true,  false},
-        {false, false, false, false}
-    }},
-    // Z Shape
-    {{
-        {false, false, false, false},
-        {false, true,  true,  false},
-        {false, false, true,  true },
-        {false, false, false, false}
-    }},
-    // J Shape
-    {{
-        {false, false, false, false},
-        {false, true,  false, false},
-        {false, true,  true,  true },
-        {false, false, false, false}
-    }},
-    // L Shape
-    {{
-        {false, false, false, false},
-        {false, false, false, true },
-        {false, true,  true,  true },
-        {false, false, false, false}
-    }},
-}};
