@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <vector>
 #include <iostream>
+#include <array>
 #include "pico/stdlib.h"
 
 class charlieplexDriver
@@ -8,7 +9,7 @@ class charlieplexDriver
     private:
         uint32_t GPIO_PIN_COUNT = 27;
         uint32_t LED_PIN_COUNT = 22;
-        uint32_t LEDMask =   0xFFFFFFc;
+        uint32_t LEDMask =   0xFFFFFFC;
         uint32_t GPIOMask =  0xFFFFFFFF;
         uint32_t frameArray[22]= {0}; // a frame with bitmasks equal to vertical bitmask (Will be horizontal bitmask in hardware rev 0.3)
 
@@ -20,12 +21,11 @@ class charlieplexDriver
             return result;
         }
 
-        //funnily enough we can deal with bool's up to this point, should make it easier to write games just by dealing with an array of on's and off's
-        void compressFrameArray(bool (&frame)[22][21]){
-            for(int i = 0; i < 22; i++){
-                frameArray[i] = 0u;//reset frame array from last call
-                for(uint32_t j = 0; j < 21; j++){
-                    if (frame[i][j]){
+        void compressFrameArray(std::array<std::array<bool, 21>, 22>& frame) {
+            for (size_t i = 0; i < 22; i++) {
+                frameArray[i] = 0u; 
+                for (size_t j = 0; j < 21; j++) {
+                    if (frame[i][j]) {
                         frameArray[i] |= (1u << j);
                     }
                 }
@@ -45,12 +45,13 @@ class charlieplexDriver
             gpio_init_mask(GPIOMask);
         }
 
-        void writeFrame(bool (&frames)[22][21]){
+        void writeFrame(std::array<std::array<bool, 21>, 22>& frames){
             gpio_set_dir_all_bits(GPIO_IN);//clear last frame
+            //TODO: clear gpio pin out writes
             compressFrameArray(frames);
             for(uint32_t i = 0u; i < 22u; i++){
                 int shift = 2;// shift framebuff to account for pins 1 and 2 in rev0.2+ being used for uart debugging
-                uint32_t framebuff = expandRow(frameArray[i]<<2, i<<shift);//expand row in frame to be 21 bits long
+                uint32_t framebuff = expandRow(frameArray[i]<<2, i+shift);//expand row in frame to be 21 bits long
                 gpio_set_dir_in_masked(~(framebuff | 1u<<i<<shift));//set high-z pins
                 gpio_set_dir_out_masked((framebuff | 1u<<i<<shift));//set pins for IO
 

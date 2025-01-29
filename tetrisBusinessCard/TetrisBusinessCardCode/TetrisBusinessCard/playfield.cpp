@@ -1,5 +1,9 @@
+#ifndef PLAYFIELD_H
+#define PLAYFIELD_H
+
 #include <array>
 #include "shape.cpp"
+
 class Playfield {
     public:
         Playfield(Shape* startingShape){
@@ -7,7 +11,7 @@ class Playfield {
             inPlay = startingShape;
         }
 
-        std::array<std::array<bool,21>,10> getPlayfield(){
+        std::array<std::array<bool,10>,21> getPlayfield(){
             return field;
         }
 
@@ -21,5 +25,6 @@ class Playfield {
     private:
         Shape* inPlay = NULL;
         Shape* heldShape = NULL;
-        std::array<std::array<bool,21>,10> field;
+        std::array<std::array<bool,10>,21> field;
 };
+#endif 
