@@ -5,6 +5,7 @@
 #include "shape.cpp"
 #include "playfield.cpp"
 #include "matrix.cpp"
+#include "button.cpp"
 
 const uint32_t GPIO_PIN_COUNT = 27;
 const uint32_t LED_PIN_COUNT = 22;
@@ -122,6 +123,23 @@ int main() {
     charlieplexDriver driver;
     uartInit();
     //testPatterns(driver);
+    Button upButton(24);
+    Button leftButton(25);
+    Button downButton(26);
+    Button rightButton(27);
+    Button aButton(28);
+    Button bButton(29);
+
+    upButton.onPress([]() { std::cout << "upPressed" << std::endl; });
+    leftButton.onPress([]() { std::cout << "leftPressed" << std::endl; });
+    downButton.onPress([]() { std::cout << "downPressed" << std::endl; });
+    rightButton.onPress([]() { std::cout << "rightPressed" << std::endl; });
+    aButton.onPress([]() { std::cout << "aPressed" << std::endl; });
+    bButton.onPress([]() { std::cout << "bPressed" << std::endl; });
+
+    while(true){
+
+    }
 
     Shape tetromino;
     printGrid<4, 4>(tetromino.getShape(), "Initial Tetromino Shape");
