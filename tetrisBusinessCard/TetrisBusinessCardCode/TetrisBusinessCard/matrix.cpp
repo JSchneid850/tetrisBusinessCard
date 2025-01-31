@@ -16,17 +16,21 @@ class Matrix {
         }
 
         void mapShape(Shape* shape){
-            std::pair<int,int> pos = shape->getPos();
+            std::pair<int,int> pos {shape->x, shape->y};
             std::array<std::array<bool,4>, 4> tetromino = shape->getShape();
             for(int i=0; i <4; ++i){
                 for(int j=0; j<4; ++j){
                     if(tetromino[i][j]){
                         //this might be backwards
-                        matrix[i+pos.first][j+pos.second] = true;
+                        matrix[pos.second + i][pos.first + j] = true;
                     }
                 }
             }
 
+        }
+
+        void reset(){
+            matrix = {{false}};
         }
 
         std::array<std::array<bool,21>,22> getMatrix(){

@@ -15,6 +15,10 @@ class Playfield {
             return field;
         }
 
+        void setPlayfield(std::array<std::array<bool, 10>, 21> playfield){
+            this->field= playfield;
+        }
+
         Shape swapShape(Shape* shape){
 
             Shape* tempShape = this->heldShape;

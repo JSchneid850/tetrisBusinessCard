@@ -10,11 +10,14 @@
 class Shape
 {
     public:
+        int x;
+        int y;
         Shape() {
             static std::mt19937 rng(static_cast<unsigned>(std::time(nullptr)));
             std::uniform_int_distribution<int> dist(0,6);
             shape = tetrominoes.at(dist(rng));
-            pos = {0, 3};
+            x = 3;
+            y = 0;
         }
 
         void rotateClockwise(){
@@ -38,20 +41,12 @@ class Shape
             shape = rotatedCC;
         }
 
-        void updatePos(std::pair<int,int> newPos){
-            this->pos = newPos;
-        }
-
-        std::pair<int,int> getPos(){
-            return pos;
-        }
-
         std::array<std::array<bool,4>, 4> getShape(){
             return shape;
         }
 
     private:
-        std::pair<int, int> pos {0,0};
+
         std::array<std::array<bool, 4>, 4> shape;
         static constexpr std::array<std::array<std::array<bool, 4>, 4>, 7> tetrominoes = {{
             // I Shape

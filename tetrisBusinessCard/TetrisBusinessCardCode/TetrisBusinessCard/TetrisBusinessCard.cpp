@@ -1,16 +1,19 @@
 #include <stdio.h>
 #include <cstring>
+#include <queue>
 #include "pico/stdlib.h"
 #include "charlieplexDriver.cpp"
 #include "shape.cpp"
 #include "playfield.cpp"
 #include "matrix.cpp"
 #include "button.cpp"
+#include "action.cpp"
 
 const uint32_t GPIO_PIN_COUNT = 27;
 const uint32_t LED_PIN_COUNT = 22;
 const uint32_t LEDMask = 0x3FFFFF;
 const uint32_t GPIOMask =  0x2FFFFFF;
+const uint32_t targetFrameMs = 33; 
 
 #define UART_ID uart0
 #define BAUD_RATE 115200
@@ -20,6 +23,7 @@ const uint32_t GPIOMask =  0x2FFFFFF;
 
 Shape startingShape;
 Playfield field(&startingShape);
+std::queue<Action> actionQueue;
 
 void uartInit(){
     gpio_set_function(UART_TX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_TX_PIN));
@@ -115,12 +119,90 @@ void testPatterns(charlieplexDriver &driver) {
     }
 }
 
-void stepGame() {
+bool checkCollision(Playfield& playfield, Shape& shape){
+    auto field = playfield.getPlayfield();
+    auto tetromino = shape.getShape();
+    int x = shape.x;
+    int y = shape.y;
+
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            if (tetromino[i][j]) {
+                int newX = x + i;
+                int newY = y + j;
+
+                // Check boundaries
+                if (newX < 0 || newX >= 10 || newY < 0 || newY >= 21) {
+                    return true;
+                }
+
+                // Check for existing blocks
+                if (field[newX][newY]) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
 
 }
 
+void lockShape(Playfield* playfield, Shape& shape){
+    auto tetromino = shape.getShape();
+    int x = shape.x;
+    int y = shape.y;
+    auto field = playfield ->getPlayfield();
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            if (tetromino[i][j]) {
+                field[y + i][x + j] = true;
+            }
+        }
+    }
+    printGrid<21, 10>(field, "updated field");
+    playfield->setPlayfield(field);
+}
+
+void stepGame(Shape* shape, Playfield* playfield) {
+    while (!actionQueue.empty()){
+        Action action = actionQueue.front();
+        actionQueue.pop(); 
+
+        int oldX = shape->x;
+        int oldY = shape->y;
+
+        switch (action)
+        {
+        case LEFT:
+            shape->x++;
+            break;
+        case RIGHT:
+            shape->x--;
+            break;
+        case A://rotate
+            /* code */
+            break;
+        case DOWN:
+            shape->y++;
+            break;
+        default:
+            break;
+        }
+
+        if (checkCollision(*playfield, *shape)){
+            shape->x = oldX;
+            shape->y = oldY;
+
+            if(action == DOWN){
+                lockShape(playfield, *shape);
+                *shape = Shape();
+            }
+        }
+    }
+}
+
 int main() {
-    charlieplexDriver driver;
+     charlieplexDriver driver;
     uartInit();
     //testPatterns(driver);
     Button upButton(24);
@@ -130,30 +212,45 @@ int main() {
     Button aButton(28);
     Button bButton(29);
 
-    upButton.onPress([]() { std::cout << "upPressed" << std::endl; });
-    leftButton.onPress([]() { std::cout << "leftPressed" << std::endl; });
-    downButton.onPress([]() { std::cout << "downPressed" << std::endl; });
-    rightButton.onPress([]() { std::cout << "rightPressed" << std::endl; });
-    aButton.onPress([]() { std::cout << "aPressed" << std::endl; });
-    bButton.onPress([]() { std::cout << "bPressed" << std::endl; });
-
-    while(true){
-
-    }
+    upButton.onPress([]() { 
+        actionQueue.push(UP); 
+    });
+    leftButton.onPress([]() { 
+        actionQueue.push(LEFT); 
+    });
+    downButton.onPress([]() { 
+        actionQueue.push(DOWN); 
+    });
+    rightButton.onPress([]() { 
+        actionQueue.push(RIGHT); 
+    });
+    aButton.onPress([]() { 
+        actionQueue.push(A); 
+    });
+    bButton.onPress([]() { 
+        actionQueue.push(B); 
+    });
 
     Shape tetromino;
-    printGrid<4, 4>(tetromino.getShape(), "Initial Tetromino Shape");
-
     Playfield playfield(&tetromino);
-    printGrid<21, 10>(playfield.getPlayfield(), "Initial Playfield");
 
     Matrix matrix;
     matrix.mapPlayfield(&playfield);
     matrix.mapShape(&tetromino);
-    printGrid<22, 21>(matrix.getMatrix(), "Final Matrix (Playfield + Tetromino)");
 
-    auto frame = matrix.getMatrix();
-    
-    driver.writeFrame(frame);
+    while(true){
+        uint32_t frameStart = to_ms_since_boot(get_absolute_time());
 
+        stepGame(&tetromino, &playfield);
+
+        matrix.reset();
+        matrix.mapPlayfield(&playfield);
+        matrix.mapShape(&tetromino);
+
+        auto frame = matrix.getMatrix();
+        driver.writeFrame(frame);
+
+        uint32_t frameTime = to_ms_since_boot(get_absolute_time()) - frameStart;
+
+    }
 }

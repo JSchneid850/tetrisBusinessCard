@@ -56,6 +56,7 @@ class charlieplexDriver
                 gpio_set_dir_out_masked((framebuff | 1u<<i<<shift));//set pins for IO
 
                 gpio_put_masked(LEDMask, (~framebuff | 1u<<i<<shift));//set IO pins for each row
+                sleep_us(10);
             }
         }
 }; 
