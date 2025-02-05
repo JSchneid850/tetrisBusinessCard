@@ -21,26 +21,15 @@ class Playfield {
         }
 
         Shape* swapShape(Shape* shape) {
-        if (!heldShape) {
-                heldShape = new Shape(*shape);
-                heldShape->x = shape->x; 
-                heldShape->y = shape->y;
+            Shape* tempShape = heldShape;
+            heldShape = new Shape(*shape);
+            heldShape->x = shape->x;
+            heldShape->y = shape->y;
 
-                Shape* newShape = new Shape(*nextShape);
-                newShape->x = shape->x;
-                newShape->y = shape->y;
-
-                return newShape;
+            if (tempShape) {
+                return new Shape(*tempShape);
             } else {
-                Shape* tempShape = heldShape;
-                heldShape = new Shape(*shape);
-                heldShape->x = shape->x;
-                heldShape->y = shape->y;
-
-                tempShape->x = shape->x; 
-                tempShape->y = shape->y;
-
-                return tempShape;
+                return new Shape();
             }
         }
 

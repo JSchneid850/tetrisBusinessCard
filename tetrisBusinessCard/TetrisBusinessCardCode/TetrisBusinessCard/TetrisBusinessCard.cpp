@@ -8,11 +8,6 @@
 #include "matrix.cpp"
 #include "button.cpp"
 #include "action.cpp"
-
-const uint32_t GPIO_PIN_COUNT = 27;
-const uint32_t LED_PIN_COUNT = 22;
-const uint32_t LEDMask = 0x3FFFFF;
-const uint32_t GPIOMask =  0x2FFFFFF;
 const uint32_t targetFrameMs = 4; 
 int frameCount = 0;
 int score = 0;
@@ -217,7 +212,59 @@ void resetGame(Playfield* field){
 
 }
 
-void stepGame(Shape* shape, Playfield* playfield) {
+void swapShapeAndCheckCollision(Playfield *playfield, Shape *shape, bool &retFlag)
+{
+    retFlag = true;
+    Shape *swappedShape = playfield->swapShape(shape);
+
+    swappedShape->x = shape->x;
+    swappedShape->y = shape->y;
+
+    if (checkCollision(*playfield, *swappedShape))
+    {
+        bool moved = false;
+
+        for (int i = 1; i <= 2; i++)
+        {
+            swappedShape->x = shape->x - i;
+            if (!checkCollision(*playfield, *swappedShape))
+            {
+                moved = true;
+                break;
+            }
+        }
+
+        if (!moved)
+        {
+            swappedShape->x = shape->x;
+        }
+
+        if (!moved)
+        {
+            for (int i = 1; i <= 2; i++)
+            {
+                swappedShape->x = shape->x + i;
+                if (!checkCollision(*playfield, *swappedShape))
+                {
+                    moved = true;
+                    break;
+                }
+            }
+        }
+
+        if (!moved)
+        {
+            delete swappedShape;
+            return;
+        }
+    }
+
+    *shape = *swappedShape;
+    delete swappedShape;
+    retFlag = false;
+}
+
+void stepGame(Shape* shape, Playfield* playfield, Scoreboard* scoreBoard) {
     while (!actionQueue.empty()){
         Action action = actionQueue.front();
         actionQueue.pop(); 
@@ -234,7 +281,10 @@ void stepGame(Shape* shape, Playfield* playfield) {
             shape->x--;
             break;
         case UP:
-            *shape = *playfield->swapShape(shape);
+            bool retFlag;
+            swapShapeAndCheckCollision(playfield, shape, retFlag);
+            if (retFlag)
+                return;
             break;
         case DOWN:
             shape->y++;
@@ -252,16 +302,20 @@ void stepGame(Shape* shape, Playfield* playfield) {
         if (checkCollision(*playfield, *shape)){
             if(action == DOWN){
                 shape->y--;
-                score += lockShape(playfield, *shape);
+                scoreBoard->addScore(lockShape(playfield, *shape));
+                scoreBoard->updateScoreGrid();
                 *shape = *playfield->getNextShape();
                 playfield->createNextShape();
 
                 if (checkCollision(*playfield, *shape)) {
                     while (true) {
-                        if (!actionQueue.empty() && actionQueue.front() == A) {
+                        if (actionQueue.front() == A) {
                             actionQueue.pop();
                             resetGame(playfield);
+                            scoreBoard->resetScore();
                             return;
+                        }else{
+                            actionQueue.pop();
                         }
                         sleep_ms(100);
                     }
@@ -310,14 +364,15 @@ int main() {
 
     Shape tetromino;
     Playfield playfield(&tetromino);
+    Scoreboard scoreBoard;
     Matrix matrix;
-
+    scoreBoard.updateScoreGrid();
     playfield.createNextShape();
 
     while(true){
         uint32_t frameStart = to_ms_since_boot(get_absolute_time());
 
-        stepGame(&tetromino, &playfield);
+        stepGame(&tetromino, &playfield, &scoreBoard);
 
         matrix.reset();
         matrix.mapPlayfield(&playfield);
@@ -325,6 +380,7 @@ int main() {
         matrix.mapHeldShape(playfield.getHeldShape());
         matrix.mapNextShape(playfield.getNextShape());
         matrix.mapPlayFieldIndicator();
+        matrix.mapScoreboard(&scoreBoard);
 
         auto frame = matrix.getMatrix();
         driver.writeFrame(frame);
@@ -334,7 +390,7 @@ int main() {
             sleep_ms(targetFrameMs-frameTime);
         }
         frameCount++;
-        if(frameCount == 241){
+        if(frameCount == (241 - (scoreBoard.getScore()*3))){
             if(actionQueue.front()!=DOWN || actionQueue.empty()){
                 actionQueue.push(DOWN);
             }

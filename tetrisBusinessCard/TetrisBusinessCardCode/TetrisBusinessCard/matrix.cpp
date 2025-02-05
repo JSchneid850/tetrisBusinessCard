@@ -1,10 +1,14 @@
 #include <array>
 #include "shape.cpp"
 #include "playfield.cpp"
+#include "scoreboard.cpp"
 
 const int playfieldAndShapeXOffset = 11;
 const int heldAndNextShapexOffset = 4; 
 const int heldShapeYOffset = 6;
+const int scoreYOffset = 12;  
+const int scoreXOffset = 2;   
+
 
 class Matrix {
     public:
@@ -57,7 +61,16 @@ class Matrix {
             }
         }
 
-
+        void mapScoreboard(Scoreboard* score) {
+            std::array<std::array<bool, 7>, 5> scoreGrid = score->getGrid();
+            for (int row = 0; row < 5; ++row) {
+                for (int col = 0; col < 7; ++col) {
+                    if (scoreGrid[row][col]) {
+                        matrix[row + scoreYOffset][col + scoreXOffset] = true;
+                    }
+                }
+            }
+        }
 
         void mapPlayFieldIndicator(){
             for(int i = 0; i< 10; ++i){
