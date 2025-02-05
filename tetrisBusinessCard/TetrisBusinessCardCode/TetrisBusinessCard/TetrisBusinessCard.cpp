@@ -13,7 +13,9 @@ const uint32_t GPIO_PIN_COUNT = 27;
 const uint32_t LED_PIN_COUNT = 22;
 const uint32_t LEDMask = 0x3FFFFF;
 const uint32_t GPIOMask =  0x2FFFFFF;
-const uint32_t targetFrameMs = 33; 
+const uint32_t targetFrameMs = 4; 
+int frameCount = 0;
+int score = 0;
 
 #define UART_ID uart0
 #define BAUD_RATE 115200
@@ -22,6 +24,8 @@ const uint32_t targetFrameMs = 33;
 #define UART_RX_PIN 1
 
 Shape startingShape;
+//Shape heldShape = nullptr;
+//Shape nextShape = nullptr;
 Playfield field(&startingShape);
 std::queue<Action> actionQueue;
 
@@ -128,8 +132,8 @@ bool checkCollision(Playfield& playfield, Shape& shape){
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
             if (tetromino[i][j]) {
-                int newX = x + i;
-                int newY = y + j;
+                int newX = x + j;
+                int newY = y + i;
 
                 // Check boundaries
                 if (newX < 0 || newX >= 10 || newY < 0 || newY >= 21) {
@@ -137,7 +141,7 @@ bool checkCollision(Playfield& playfield, Shape& shape){
                 }
 
                 // Check for existing blocks
-                if (field[newX][newY]) {
+                if (field[newY][newX]) {
                     return true;
                 }
             }
@@ -147,7 +151,44 @@ bool checkCollision(Playfield& playfield, Shape& shape){
 
 }
 
-void lockShape(Playfield* playfield, Shape& shape){
+int clearLines(Playfield* playfield) {
+    auto field = playfield->getPlayfield();
+    int rowsRemoved = 0;
+    const int ROWS = 21;
+    const int COLS = 10;
+    int currentRow = ROWS - 1;
+
+    while (currentRow >= 0) {
+        bool rowIsFull = true;
+        
+        for (int col = 0; col < COLS; col++) {
+            if (!field[currentRow][col]) {
+                rowIsFull = false;
+                break;
+            }
+        }
+
+        if (rowIsFull) {
+            for (int row = currentRow; row > 0; row--) {
+                for (int col = 0; col < COLS; col++) {
+                    field[row][col] = field[row - 1][col];
+                }
+            }
+            
+            for (int col = 0; col < COLS; col++) {
+                field[0][col] = false;
+            }
+            
+            rowsRemoved++;
+        } else {
+            currentRow--;
+        }
+    }
+    playfield->setPlayfield(field);
+    return rowsRemoved;
+}
+
+int lockShape(Playfield* playfield, Shape& shape){
     auto tetromino = shape.getShape();
     int x = shape.x;
     int y = shape.y;
@@ -155,12 +196,18 @@ void lockShape(Playfield* playfield, Shape& shape){
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 4; ++j) {
             if (tetromino[i][j]) {
-                field[y + i][x + j] = true;
+                int row = y + i; 
+                int col = x + j; 
+
+                if (row >= 0 && row < 21 && col >= 0 && col < 10) {
+                    field[row][col] = true; 
+                }
             }
         }
     }
     printGrid<21, 10>(field, "updated field");
     playfield->setPlayfield(field);
+    return clearLines(playfield);
 }
 
 void stepGame(Shape* shape, Playfield* playfield) {
@@ -179,30 +226,42 @@ void stepGame(Shape* shape, Playfield* playfield) {
         case RIGHT:
             shape->x--;
             break;
-        case A://rotate
-            /* code */
-            break;
+        case UP:
+            // if(heldShape == nullptr){
+                
+            // }
+
         case DOWN:
             shape->y++;
+            break;
+        case A://rotate
+            shape->rotateClockwise();
+            break;
+        case B:
+            shape->rotateCounterClockwise();
             break;
         default:
             break;
         }
 
         if (checkCollision(*playfield, *shape)){
-            shape->x = oldX;
-            shape->y = oldY;
-
             if(action == DOWN){
-                lockShape(playfield, *shape);
+                shape->y--;
+                score += lockShape(playfield, *shape);
                 *shape = Shape();
+            }else if (action == A){
+                shape->rotateCounterClockwise();
+            }else if (action == B){
+                shape->rotateClockwise();
+            }else {
+                shape->x = oldX;
             }
         }
     }
 }
 
 int main() {
-     charlieplexDriver driver;
+    charlieplexDriver driver;
     uartInit();
     //testPatterns(driver);
     Button upButton(24);
@@ -251,6 +310,15 @@ int main() {
         driver.writeFrame(frame);
 
         uint32_t frameTime = to_ms_since_boot(get_absolute_time()) - frameStart;
-
+        if(frameTime < targetFrameMs){
+            sleep_ms(targetFrameMs-frameTime);
+        }
+        frameCount++;
+        if(frameCount == 241){
+            if(actionQueue.front()!=DOWN || actionQueue.empty()){
+                actionQueue.push(DOWN);
+            }
+            frameCount = 0;
+        }
     }
 }

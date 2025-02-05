@@ -33,7 +33,7 @@ class Button{
             callback = callbackSet;
         }
 
-        Button(int pin, uint32_t debounce_ms = 50) : pin_(pin), debounceMs(debounce_ms){
+        Button(int pin, uint32_t debounce_ms = 75) : pin_(pin), debounceMs(debounce_ms){
             gpio_init(pin_);
             gpio_set_dir(pin_, GPIO_IN);
             gpio_pull_up(pin_);
