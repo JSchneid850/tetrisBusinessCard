@@ -2,6 +2,10 @@
 #include "shape.cpp"
 #include "playfield.cpp"
 
+const int playfieldAndShapeXOffset = 11;
+const int heldAndNextShapexOffset = 4; 
+const int heldShapeYOffset = 6;
+
 class Matrix {
     public:
         void mapPlayfield(Playfield* playfield){
@@ -9,7 +13,7 @@ class Matrix {
             for(int i=0; i < 21; ++i){
                 for(int j=0; j < 10; ++j){
                     if(field[i][j]){
-                        matrix[i][j] = true;
+                        matrix[i][j + playfieldAndShapeXOffset] = true;
                     }
                 }
             }
@@ -21,12 +25,44 @@ class Matrix {
             for(int i=0; i <4; ++i){
                 for(int j=0; j<4; ++j){
                     if(tetromino[i][j]){
-                        //this might be backwards
-                        matrix[pos.second + i][pos.first + j] = true;
+                        matrix[pos.second + i ][pos.first + j + playfieldAndShapeXOffset] = true;
                     }
                 }
             }
+        }
 
+        void mapHeldShape(Shape* shape){
+            if(shape){
+                std::array<std::array<bool,4>, 4> tetromino = shape->getShape();
+                for(int i=0; i <4; ++i){
+                    for(int j=0; j<4; ++j){
+                        if(tetromino[i][j]){
+                            matrix[i + heldShapeYOffset][j +heldAndNextShapexOffset] = true;
+                        }
+                    }
+                }
+            }
+        }
+
+        void mapNextShape(Shape* shape){
+            if(shape){
+                std::array<std::array<bool,4>, 4> tetromino = shape->getShape();
+                for(int i=0; i <4; ++i){
+                    for(int j=0; j<4; ++j){
+                        if(tetromino[i][j]){
+                            matrix[i][j+heldAndNextShapexOffset] = true;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        void mapPlayFieldIndicator(){
+            for(int i = 0; i< 10; ++i){
+                matrix[21][i+playfieldAndShapeXOffset] = true;
+            }
         }
 
         void reset(){

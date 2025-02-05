@@ -46,7 +46,7 @@ class charlieplexDriver
         }
 
         void writeFrame(std::array<std::array<bool, 21>, 22>& frames){
-            gpio_set_dir_all_bits(GPIO_IN);//clear last frame
+            
             //TODO: clear gpio pin out writes
             compressFrameArray(frames);
             for(uint32_t i = 0u; i < 22u; i++){
@@ -58,5 +58,6 @@ class charlieplexDriver
                 gpio_put_masked(LEDMask, (~framebuff | 1u<<i<<shift));//set IO pins for each row
                 sleep_us(10);
             }
+            gpio_set_dir_all_bits(GPIO_IN);//clear last frame
         }
 }; 

@@ -1,10 +1,8 @@
-// shape.cpp
 #ifndef SHAPE_H
 #define SHAPE_H
 
 #include <array>
 #include <iostream>
-#include <random>
 #include <ctime>
 
 class Shape
@@ -13,9 +11,7 @@ class Shape
         int x;
         int y;
         Shape() {
-            static std::mt19937 rng(static_cast<unsigned>(std::time(nullptr)));
-            std::uniform_int_distribution<int> dist(0,6);
-            shape = tetrominoes.at(dist(rng));
+            shape = tetrominoes.at((rand()%7));
             x = 3;
             y = 0;
         }

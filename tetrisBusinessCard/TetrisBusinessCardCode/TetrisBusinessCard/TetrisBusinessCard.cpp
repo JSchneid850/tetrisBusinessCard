@@ -23,10 +23,6 @@ int score = 0;
 #define UART_TX_PIN 0
 #define UART_RX_PIN 1
 
-Shape startingShape;
-//Shape heldShape = nullptr;
-//Shape nextShape = nullptr;
-Playfield field(&startingShape);
 std::queue<Action> actionQueue;
 
 void uartInit(){
@@ -161,7 +157,7 @@ int clearLines(Playfield* playfield) {
     while (currentRow >= 0) {
         bool rowIsFull = true;
         
-        for (int col = 0; col < COLS; col++) {
+        for (int col = 0; col < COLS; ++col) {
             if (!field[currentRow][col]) {
                 rowIsFull = false;
                 break;
@@ -169,13 +165,13 @@ int clearLines(Playfield* playfield) {
         }
 
         if (rowIsFull) {
-            for (int row = currentRow; row > 0; row--) {
-                for (int col = 0; col < COLS; col++) {
+            for (int row = currentRow; row > 0; --row) {
+                for (int col = 0; col < COLS; ++col) {
                     field[row][col] = field[row - 1][col];
                 }
             }
             
-            for (int col = 0; col < COLS; col++) {
+            for (int col = 0; col < COLS; ++col) {
                 field[0][col] = false;
             }
             
@@ -210,6 +206,17 @@ int lockShape(Playfield* playfield, Shape& shape){
     return clearLines(playfield);
 }
 
+void resetGame(Playfield* field){
+    score = 0;
+    frameCount = 0;
+    Shape* newShape = new Shape();
+    field->setPlayfield({{false}});
+    while (!actionQueue.empty()) {
+        actionQueue.pop();
+    } 
+
+}
+
 void stepGame(Shape* shape, Playfield* playfield) {
     while (!actionQueue.empty()){
         Action action = actionQueue.front();
@@ -227,10 +234,8 @@ void stepGame(Shape* shape, Playfield* playfield) {
             shape->x--;
             break;
         case UP:
-            // if(heldShape == nullptr){
-                
-            // }
-
+            *shape = *playfield->swapShape(shape);
+            break;
         case DOWN:
             shape->y++;
             break;
@@ -248,13 +253,26 @@ void stepGame(Shape* shape, Playfield* playfield) {
             if(action == DOWN){
                 shape->y--;
                 score += lockShape(playfield, *shape);
-                *shape = Shape();
+                *shape = *playfield->getNextShape();
+                playfield->createNextShape();
+
+                if (checkCollision(*playfield, *shape)) {
+                    while (true) {
+                        if (!actionQueue.empty() && actionQueue.front() == A) {
+                            actionQueue.pop();
+                            resetGame(playfield);
+                            return;
+                        }
+                        sleep_ms(100);
+                    }
+                }
             }else if (action == A){
                 shape->rotateCounterClockwise();
             }else if (action == B){
                 shape->rotateClockwise();
             }else {
                 shape->x = oldX;
+                shape->y = oldY;
             }
         }
     }
@@ -292,10 +310,9 @@ int main() {
 
     Shape tetromino;
     Playfield playfield(&tetromino);
-
     Matrix matrix;
-    matrix.mapPlayfield(&playfield);
-    matrix.mapShape(&tetromino);
+
+    playfield.createNextShape();
 
     while(true){
         uint32_t frameStart = to_ms_since_boot(get_absolute_time());
@@ -305,6 +322,9 @@ int main() {
         matrix.reset();
         matrix.mapPlayfield(&playfield);
         matrix.mapShape(&tetromino);
+        matrix.mapHeldShape(playfield.getHeldShape());
+        matrix.mapNextShape(playfield.getNextShape());
+        matrix.mapPlayFieldIndicator();
 
         auto frame = matrix.getMatrix();
         driver.writeFrame(frame);
