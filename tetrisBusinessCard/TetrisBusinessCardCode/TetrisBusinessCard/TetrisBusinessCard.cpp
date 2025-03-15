@@ -8,7 +8,7 @@
 #include "matrix.cpp"
 #include "button.cpp"
 #include "action.cpp"
-const uint32_t targetFrameMs = 4; 
+const uint32_t targetFrameUs = 1000; 
 int frameCount = 0;
 int score = 0;
 
@@ -23,7 +23,8 @@ std::queue<Action> actionQueue;
 void uartInit(){
     gpio_set_function(UART_TX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_TX_PIN));
     gpio_set_function(UART_RX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_RX_PIN));
-    uart_init(UART_ID, BAUD_RATE);}
+    uart_init(UART_ID, BAUD_RATE);
+    }
 
 template <size_t Rows, size_t Cols>
 void printGrid(const std::array<std::array<bool, Cols>, Rows>& grid, const std::string& title) {
@@ -370,7 +371,7 @@ int main() {
     playfield.createNextShape();
 
     while(true){
-        uint32_t frameStart = to_ms_since_boot(get_absolute_time());
+        uint32_t frameStart = to_us_since_boot(get_absolute_time());
 
         stepGame(&tetromino, &playfield, &scoreBoard);
 
@@ -381,16 +382,16 @@ int main() {
         matrix.mapNextShape(playfield.getNextShape());
         matrix.mapPlayFieldIndicator();
         matrix.mapScoreboard(&scoreBoard);
-
         auto frame = matrix.getMatrix();
         driver.writeFrame(frame);
 
-        uint32_t frameTime = to_ms_since_boot(get_absolute_time()) - frameStart;
-        if(frameTime < targetFrameMs){
-            sleep_ms(targetFrameMs-frameTime);
-        }
+//         uint32_t frameTime = to_us_since_boot(get_absolute_time()) - frameStart;
+//         if(frameTime < targetFrameUs){
+//                 std::cout << frameTime << std::endl;
+// //            sleep_us(targetFrameUs-frameTime);
+//         }
         frameCount++;
-        if(frameCount == (241 - (scoreBoard.getScore()*3))){
+        if(frameCount == (961 - (scoreBoard.getScore()*3))){
             if(actionQueue.front()!=DOWN || actionQueue.empty()){
                 actionQueue.push(DOWN);
             }

@@ -1,5 +1,4 @@
 enum Action {
-    
     UP,
     LEFT,
     DOWN,

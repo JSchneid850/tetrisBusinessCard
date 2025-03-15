@@ -1,8 +1,6 @@
 #ifndef BUTTON_H
 #define BUTTON_H
-
 #include <functional>
-
 #include <map>
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
@@ -14,9 +12,7 @@ class Button{
         uint32_t currentTime = to_ms_since_boot(get_absolute_time());
             if ((currentTime - lastPressed) >= debounceMs) {
                 lastPressed = currentTime;
-                if (lastPressed) {
-                    callback();
-                }
+                callback();
             }
             }
 
