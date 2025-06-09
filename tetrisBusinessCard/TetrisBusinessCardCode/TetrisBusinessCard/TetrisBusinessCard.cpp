@@ -2,15 +2,18 @@
 #include <cstring>
 #include <queue>
 #include "pico/stdlib.h"
+#include "hardware/clocks.h"
 #include "charlieplexDriver.cpp"
 #include "shape.cpp"
 #include "playfield.cpp"
 #include "matrix.cpp"
 #include "button.cpp"
 #include "action.cpp"
-const uint32_t targetFrameUs = 1000; 
+#include "TetrisBusinessCard.h"
+const uint32_t targetFrameUs = 1000;
 int frameCount = 0;
 int score = 0;
+bool playing = true;
 
 #define UART_ID uart0
 #define BAUD_RATE 115200
@@ -25,6 +28,10 @@ void uartInit(){
     gpio_set_function(UART_RX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_RX_PIN));
     uart_init(UART_ID, BAUD_RATE);
     }
+
+void setCoreSpeed(){
+    set_sys_clock_khz(18000, true);
+}
 
 template <size_t Rows, size_t Cols>
 void printGrid(const std::array<std::array<bool, Cols>, Rows>& grid, const std::string& title) {
@@ -151,8 +158,7 @@ int clearLines(Playfield* playfield) {
     int currentRow = ROWS - 1;
 
     while (currentRow >= 0) {
-        bool rowIsFull = true;
-        
+        bool rowIsFull = true;      
         for (int col = 0; col < COLS; ++col) {
             if (!field[currentRow][col]) {
                 rowIsFull = false;
@@ -165,8 +171,7 @@ int clearLines(Playfield* playfield) {
                 for (int col = 0; col < COLS; ++col) {
                     field[row][col] = field[row - 1][col];
                 }
-            }
-            
+            }    
             for (int col = 0; col < COLS; ++col) {
                 field[0][col] = false;
             }
@@ -177,6 +182,11 @@ int clearLines(Playfield* playfield) {
         }
     }
     playfield->setPlayfield(field);
+
+    if(rowsRemoved == 4){
+        rowsRemoved+=2;
+    }
+
     return rowsRemoved;
 }
 
@@ -202,15 +212,13 @@ int lockShape(Playfield* playfield, Shape& shape){
     return clearLines(playfield);
 }
 
-void resetGame(Playfield* field){
+void resetGame(Playfield& field){
     score = 0;
     frameCount = 0;
-    Shape* newShape = new Shape();
-    field->setPlayfield({{false}});
-    while (!actionQueue.empty()) {
-        actionQueue.pop();
-    } 
-
+    Shape* newInPlay = new Shape();
+    Shape* nextShape = new Shape();
+    field.reset(newInPlay, nextShape);
+    playing = true;
 }
 
 void swapShapeAndCheckCollision(Playfield *playfield, Shape *shape, bool &retFlag)
@@ -265,6 +273,16 @@ void swapShapeAndCheckCollision(Playfield *playfield, Shape *shape, bool &retFla
     retFlag = false;
 }
 
+bool isHardDropping;
+void hardDrop(Playfield* playfield, Shape* shape){
+    if(isHardDropping){
+        actionQueue.push(DOWN);
+        if(checkCollision(*playfield, *shape)){
+            isHardDropping = false;
+        }
+    }
+}
+
 void stepGame(Shape* shape, Playfield* playfield, Scoreboard* scoreBoard) {
     while (!actionQueue.empty()){
         Action action = actionQueue.front();
@@ -294,10 +312,13 @@ void stepGame(Shape* shape, Playfield* playfield, Scoreboard* scoreBoard) {
             shape->rotateClockwise();
             break;
         case B:
-            shape->rotateCounterClockwise();
+            isHardDropping = true;
             break;
         default:
             break;
+        }
+        if(isHardDropping){
+            hardDrop(playfield, shape);
         }
 
         if (checkCollision(*playfield, *shape)){
@@ -309,17 +330,7 @@ void stepGame(Shape* shape, Playfield* playfield, Scoreboard* scoreBoard) {
                 playfield->createNextShape();
 
                 if (checkCollision(*playfield, *shape)) {
-                    while (true) {
-                        if (actionQueue.front() == A) {
-                            actionQueue.pop();
-                            resetGame(playfield);
-                            scoreBoard->resetScore();
-                            return;
-                        }else{
-                            actionQueue.pop();
-                        }
-                        sleep_ms(100);
-                    }
+                    playing = false;
                 }
             }else if (action == A){
                 shape->rotateCounterClockwise();
@@ -333,48 +344,10 @@ void stepGame(Shape* shape, Playfield* playfield, Scoreboard* scoreBoard) {
     }
 }
 
-int main() {
-    charlieplexDriver driver;
-    uartInit();
-    //testPatterns(driver);
-    Button upButton(24);
-    Button leftButton(25);
-    Button downButton(26);
-    Button rightButton(27);
-    Button aButton(28);
-    Button bButton(29);
-
-    upButton.onPress([]() { 
-        actionQueue.push(UP); 
-    });
-    leftButton.onPress([]() { 
-        actionQueue.push(LEFT); 
-    });
-    downButton.onPress([]() { 
-        actionQueue.push(DOWN); 
-    });
-    rightButton.onPress([]() { 
-        actionQueue.push(RIGHT); 
-    });
-    aButton.onPress([]() { 
-        actionQueue.push(A); 
-    });
-    bButton.onPress([]() { 
-        actionQueue.push(B); 
-    });
-
-    Shape tetromino;
-    Playfield playfield(&tetromino);
-    Scoreboard scoreBoard;
-    Matrix matrix;
-    scoreBoard.updateScoreGrid();
-    playfield.createNextShape();
-
-    while(true){
-        uint32_t frameStart = to_us_since_boot(get_absolute_time());
-
+void playTetris(Shape &tetromino, Playfield &playfield, Scoreboard &scoreBoard, Matrix &matrix, charlieplexDriver &driver)
+{
+    if(playing){
         stepGame(&tetromino, &playfield, &scoreBoard);
-
         matrix.reset();
         matrix.mapPlayfield(&playfield);
         matrix.mapShape(&tetromino);
@@ -384,18 +357,68 @@ int main() {
         matrix.mapScoreboard(&scoreBoard);
         auto frame = matrix.getMatrix();
         driver.writeFrame(frame);
-
-//         uint32_t frameTime = to_us_since_boot(get_absolute_time()) - frameStart;
-//         if(frameTime < targetFrameUs){
-//                 std::cout << frameTime << std::endl;
-// //            sleep_us(targetFrameUs-frameTime);
-//         }
         frameCount++;
-        if(frameCount == (961 - (scoreBoard.getScore()*3))){
-            if(actionQueue.front()!=DOWN || actionQueue.empty()){
+        if (frameCount == (150 - (scoreBoard.getScore() * 3)))
+        {
+            if (actionQueue.front() != DOWN || actionQueue.empty())
+            {
                 actionQueue.push(DOWN);
             }
             frameCount = 0;
         }
+    }
+    else
+    {
+        if (!actionQueue.empty())
+        {
+            actionQueue.pop();
+            resetGame(playfield);
+            scoreBoard.resetScore();
+            return;
+        }
+    }
+}
+
+void initButtons()
+{
+    Button upButton(24);
+    Button leftButton(25);
+    Button downButton(26, 200, DOWN);
+    Button rightButton(27);
+    Button aButton(28);
+    Button bButton(29);
+
+    upButton.onPress([]()
+                     { actionQueue.push(UP); });
+    leftButton.onPress([]()
+                       { actionQueue.push(LEFT); });
+    downButton.onPress([]()
+                       { actionQueue.push(DOWN); });
+    rightButton.onPress([]()
+                        { actionQueue.push(RIGHT); });
+    aButton.onPress([]()
+                    { actionQueue.push(A); });
+    bButton.onPress([]()
+                    { actionQueue.push(B); });
+}
+
+int main() {
+
+
+    charlieplexDriver driver;
+    //uartInit();
+    setCoreSpeed();
+    //testPatterns(driver);
+    initButtons();
+
+    Shape tetromino;
+    Playfield playfield(&tetromino);
+    Scoreboard scoreBoard;
+    Matrix matrix;
+    scoreBoard.updateScoreGrid();
+    playfield.createNextShape();
+
+    while(true){
+        playTetris(tetromino, playfield, scoreBoard, matrix, driver);
     }
 }

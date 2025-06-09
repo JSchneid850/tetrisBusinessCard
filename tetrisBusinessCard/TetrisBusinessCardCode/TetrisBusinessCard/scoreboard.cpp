@@ -39,7 +39,7 @@ class Scoreboard
 
         void resetScore(){
             score = 0;
-            clearGrid();
+            updateScoreGrid();
         }
     private:
         int score = 0;

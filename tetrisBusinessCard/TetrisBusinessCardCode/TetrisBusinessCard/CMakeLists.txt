@@ -43,7 +43,8 @@ pico_set_program_version(TetrisBusinessCard "0.1")
 
 # Add the standard library to the build
 target_link_libraries(TetrisBusinessCard
-        pico_stdlib)
+        pico_stdlib
+        pico_rand)
 
 # Add the standard include files to the build
 target_include_directories(TetrisBusinessCard PRIVATE

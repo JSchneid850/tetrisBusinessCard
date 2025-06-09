@@ -1,4 +1,109 @@
-23649031419796226
+23690800407969772
+Adafruit_1.5_128x128_RGB_OLED
+1X11_ROUND_76
+
+
+0
+11
+11
+Adafruit_1.5_128x128_RGB_OLED
+0805
+0805 (2012 Metric)
+
+0
+2
+2
+Adafruit_1.5_128x128_RGB_OLED
+ADAFRUIT_3.5MM
+
+
+0
+0
+0
+Adafruit_1.5_128x128_RGB_OLED
+FIDUCIAL_1MM
+
+
+0
+1
+1
+Adafruit_1.5_128x128_RGB_OLED
+FPC_XF2M-3015-1A
+30-Pin 0.5mm FPC Top+Bottom - OMRON - XF2M-3015-1A
+
+0
+32
+32
+Adafruit_1.5_128x128_RGB_OLED
+INDUCTOR_1007
+Inductor - 1007 (2518 Metric){return}{return}L: 2.5mm x W: 1.8mm x H: 1.8mm
+
+0
+2
+2
+Adafruit_1.5_128x128_RGB_OLED
+LOGIC_5VREADY_5MM
+
+
+0
+0
+0
+Adafruit_1.5_128x128_RGB_OLED
+MICROSD
+Courtesy: Adafruit Industries
+
+0
+12
+12
+Adafruit_1.5_128x128_RGB_OLED
+MOUNTINGHOLE_2.5_PLATED
+
+
+0
+1
+1
+Adafruit_1.5_128x128_RGB_OLED
+SOD-123
+SOD-123{return}{return}Source: http://www.diodes.com/datasheets/ds30139.pdf
+
+0
+2
+2
+Adafruit_1.5_128x128_RGB_OLED
+SOD-323
+SOD323 (2.5x1.2mm)
+
+0
+2
+2
+Adafruit_1.5_128x128_RGB_OLED
+SOIC16
+SMALL OUTLINE INTEGRATED CIRCUIT
+
+0
+16
+16
+Adafruit_1.5_128x128_RGB_OLED
+SOLDERJUMPER_REFLOW_NOPASTE
+
+
+0
+2
+2
+Adafruit_1.5_128x128_RGB_OLED
+SOT23-5
+Small Outline Transistor - 5 Pin
+
+0
+5
+5
+Adafruit_1.5_128x128_RGB_OLED
+SOT23-5@1
+Small Outline Transistor - 5 Pin
+
+0
+5
+5
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -56832,6 +56937,27 @@ emi filter
 0
 5
 5
+Footprints and libraries
+2mgh
+
+
+0
+0
+0
+Footprints and libraries
+SW_PTS647SM38SMTR2LFS_CNK
+
+PTS647SM38SMTR2LFS 
+0
+4
+4
+Footprints and libraries
+gh
+
+
+0
+0
+0
 Fuse
 FuseHolder_Blade_ATO_Littelfuse_FLR_178.6165
 Littelfuse fuse holder for ATO/FKS blade fuses, 80V, vertical, 20 x 6mm, PCB thickness up to 1.5mm, http://www.littelfuse.com/~/media/commercial-vehicle/datasheets/automotive-fuse-holders/ato/littelfuse-fuse-holder-ato-flr-pcb-datasheet.pdf
@@ -67228,6 +67354,13 @@ Mounting 4.5mm 9774100982
 8
 1
 MyFootprints
+AdafruitConnector
+
+
+0
+13
+12
+MyFootprints
 BAT_BS-02_MYG
 
 BS-02-A1BK007 
@@ -67249,6 +67382,13 @@ LED
 2
 2
 MyFootprints
+MYOUNG MY-2032-12
+
+
+0
+3
+2
+MyFootprints
 PogoConnector
 
 
@@ -67256,12 +67396,40 @@ PogoConnector
 6
 6
 MyFootprints
+RPi_Pico_SMD_TH
+Through hole straight pin header, 2x20, 2.54mm pitch, double rows
+Through hole pin header THT 2x20 2.54mm double row
+0
+86
+43
+MyFootprints
 SW_PTS647SM38SMTR2LFS_CNK
 
 PTS647SM38SMTR2LFS 
 0
 4
 4
+MyFootprints
+THTSwitch
+
+
+0
+4
+2
+MyFootprints
+THTSwitchVertical
+
+
+0
+3
+3
+MyFootprints
+qrCode
+
+
+0
+0
+0
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads

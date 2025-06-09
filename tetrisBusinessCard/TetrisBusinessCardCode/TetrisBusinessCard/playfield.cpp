@@ -21,15 +21,22 @@ class Playfield {
         }
 
         Shape* swapShape(Shape* shape) {
-            Shape* tempShape = heldShape;
-            heldShape = new Shape(*shape);
-            heldShape->x = shape->x;
-            heldShape->y = shape->y;
-
-            if (tempShape) {
-                return new Shape(*tempShape);
-            } else {
-                return new Shape();
+            if (!heldShape) {
+                heldShape = new Shape(*shape); 
+                heldShape->x = shape->x;
+                heldShape->y = shape->y;
+                
+                Shape* swappedShape = new Shape(*nextShape);
+                delete nextShape;  
+                nextShape = new Shape();
+                return swappedShape;
+            }
+            else {          
+                Shape* temp = new Shape(*heldShape);
+                heldShape = new Shape(*shape);
+                heldShape->x = shape->x;
+                heldShape->y = shape->y;
+                return temp;
             }
         }
 
@@ -39,6 +46,10 @@ class Playfield {
 
         Shape* getHeldShape(){
             return heldShape;
+        }
+
+        void setHeldShape(Shape* shape){
+            heldShape = shape;
         }
 
         void setNextShape(Shape* shape){
@@ -52,6 +63,12 @@ class Playfield {
         void createNextShape(){
             delete nextShape;
             nextShape = new Shape();
+        }
+
+        void reset(Shape* startingShape, Shape* nextShape){
+            this->inPlay = startingShape;
+            this->nextShape = nextShape;
+            this->field.fill({false});
         }
         
     private:

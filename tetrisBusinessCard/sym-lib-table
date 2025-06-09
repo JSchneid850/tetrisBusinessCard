@@ -2,4 +2,5 @@
   (version 7)
   (lib (name "RP2040")(type "KiCad")(uri "C:/Users/joshs/OneDrive/Documents/tetrisBusinessCard/Footprints and libraries/SC0914_13_/KiCADv6/2024-03-08_01-47-34.kicad_sym")(options "")(descr ""))
   (lib (name "W25Q16JVUXIQ")(type "KiCad")(uri "C:/Users/joshs/OneDrive/Documents/tetrisBusinessCard/Footprints and libraries/ul_W25Q16JVUXIQ/KiCADv6/2024-03-08_02-31-24.kicad_sym")(options "")(descr ""))
+  (lib (name "STM32F103CBT6")(type "KiCad")(uri "D:/tetrisBusinessCard/Footprints and libraries/STM32F103CBT6/KiCADv6/2025-03-15_03-22-38.kicad_sym")(options "")(descr ""))
 )

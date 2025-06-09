@@ -4,14 +4,17 @@
 #include <array>
 #include <iostream>
 #include <ctime>
+#include "pico/rand.h"
 
 class Shape
 {
     public:
         int x;
         int y;
+        int shapeChoice;
         Shape() {
-            shape = tetrominoes.at((rand()%7));
+            shapeChoice= (get_rand_32()%7);
+            shape = tetrominoes.at(shapeChoice);
             x = 3;
             y = 0;
         }
