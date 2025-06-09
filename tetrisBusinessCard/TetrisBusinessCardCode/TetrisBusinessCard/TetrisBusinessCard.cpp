@@ -9,7 +9,6 @@
 #include "matrix.cpp"
 #include "button.cpp"
 #include "action.cpp"
-#include "TetrisBusinessCard.h"
 const uint32_t targetFrameUs = 1000;
 int frameCount = 0;
 int score = 0;
@@ -403,8 +402,6 @@ void initButtons()
 }
 
 int main() {
-
-
     charlieplexDriver driver;
     //uartInit();
     setCoreSpeed();
