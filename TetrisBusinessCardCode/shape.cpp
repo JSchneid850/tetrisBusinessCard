@@ -16,7 +16,7 @@ class Shape
             shapeChoice= (get_rand_32()%7);
             shape = tetrominoes.at(shapeChoice);
             x = 3;
-            y = 0;
+            y = -1;
         }
 
         void rotateClockwise(){

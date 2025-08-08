@@ -3,7 +3,6 @@
 #include <functional>
 #include <map>
 #include <optional>
-#include "Action.cpp"
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 
@@ -19,14 +18,14 @@ enum Action {
 class Button{
     public:
         Action chosenAction;
-        void handlePressOrHold() {
-            if(chosenAction == DOWN){
-                handleHold();
-            }else{
-                handlePress();
-            }
+        // void handlePressOrHold() {
+        //     if(chosenAction == DOWN){
+        //         handleHold();
+        //     }else{
+        //         handlePress();
+        //     }
 
-        }
+        // }
 
         void handlePress() {
             uint32_t currentTime = to_ms_since_boot(get_absolute_time());
@@ -40,27 +39,25 @@ class Button{
                 callback();
         }
 
-        static void gpio_callback(uint gpio, uint32_t events) {
-            if (events & GPIO_IRQ_EDGE_FALL) {
+        static void gpio_callback(uint gpio, uint32_t event) {
                 auto instance = buttons.find(gpio);
                 if (instance != buttons.end()) {
-                    instance->second->handlePressOrHold();
+                    instance->second->handlePress();
                 }
-            }
         }
 
         void onPress(std::function<void()> callbackSet){
             callback = callbackSet;
         }
 
-        Button(int pin, uint32_t debounce_ms = 200, std::optional<Action> action = std::nullopt ) : pin_(pin), debounceMs(debounce_ms){
+        Button(int pin, uint32_t debounce_ms = 75) : pin_(pin), debounceMs(debounce_ms){
             gpio_init(pin_);
             gpio_set_dir(pin_, GPIO_IN);
             gpio_pull_up(pin_);
 
             buttons[pin_] = this;
 
-            gpio_set_irq_enabled_with_callback(pin_, GPIO_IRQ_EDGE_FALL, true, &Button::gpio_callback);
+            gpio_set_irq_enabled_with_callback(pin_, GPIO_IRQ_EDGE_RISE, true, &Button::gpio_callback);
         }
 
     private:
