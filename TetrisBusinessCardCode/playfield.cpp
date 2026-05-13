@@ -48,16 +48,20 @@ class Playfield {
             return heldShape;
         }
 
+        Shape* getNextShape(){
+            return nextShape;
+        }
+
+        Shape* getCurentShape(){
+            return inPlay;
+        }
+
         void setHeldShape(Shape* shape){
             heldShape = shape;
         }
 
         void setNextShape(Shape* shape){
             nextShape = shape;
-        }
-
-        Shape* getNextShape(){
-            return nextShape;
         }
 
         void createNextShape(){
