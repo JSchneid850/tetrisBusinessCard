@@ -8,7 +8,10 @@
 #include "playfield.cpp"
 #include "matrix.cpp"
 #include "button.cpp"
+#include "externalControl.cpp"
+
 const uint32_t targetFrameUs = 1000;
+const bool selfLearning = false; //use this if hooked up to a Pi running the genetic algorithm code
 int frameCount = 0;
 int scrollStep = 0;
 bool playing = true;
@@ -38,6 +41,30 @@ void uartInit()
     gpio_set_function(UART_TX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_TX_PIN));
     gpio_set_function(UART_RX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_RX_PIN));
     uart_init(UART_ID, BAUD_RATE);
+    //the next bit of setup is taken from uart_advanced.c demo code
+
+    // Set UART flow control CTS/RTS, we don't want these, so turn them off
+    uart_set_hw_flow(UART_ID, false, false);
+
+    // Set our data format
+    uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
+
+    // Turn off FIFO's - we want to do this character by character
+    uart_set_fifo_enabled(UART_ID, false);
+
+    // Set up a RX interrupt
+    // We need to set up the handler first
+    // Select correct interrupt for the UART we are using
+    int UART_IRQ = UART_ID == uart0 ? UART0_IRQ : UART1_IRQ;
+    //TODO:Write interrupt handler
+    // And set up and enable the interrupt handlers
+    irq_set_exclusive_handler(UART_IRQ, on_uart_rx);
+    irq_set_enabled(UART_IRQ, true);
+
+    // Now enable the UART to send interrupts - RX only
+    uart_set_irq_enables(UART_ID, true, false);
+
+    //now we should be able to use uart_puts(UART_ID, message) to communicate with the PI
 }
 
 void setCoreSpeed()
@@ -487,11 +514,27 @@ void setInitials(Matrix &matrix, charlieplexDriver &driver)
     }
 }
 
+void autoStepGame(Score &scoreGrid)
+{
+    if (frameCount > (150 - (scoreGrid.getScore() * 1.5)))
+    {
+        if (actionQueue.front() != DOWN || actionQueue.empty())
+        {
+            actionQueue.push(DOWN);
+        }
+        frameCount = 0;
+    }
+}
+
 void playTetris(Shape &tetromino, Playfield &playfield, Score &scoreGrid, Matrix &matrix, charlieplexDriver &driver)
 {
 
     while (playing)
     {
+        if(selfLearning && uart_is_readable(UART_ID)){
+            //TODO: read and process UART message
+            actionQueue.push(externalControl::decodeMessage());
+        }
         stepGame(&tetromino, &playfield, &scoreGrid);
         matrix.reset();
         matrix.mapPlayfield(&playfield);
@@ -503,37 +546,50 @@ void playTetris(Shape &tetromino, Playfield &playfield, Score &scoreGrid, Matrix
         auto frame = matrix.getMatrix();
         driver.writeFrame(frame);
         frameCount++;
-        if (frameCount > (150 - (scoreGrid.getScore() * 1.5)))
-        {
-            if (actionQueue.front() != DOWN || actionQueue.empty())
-            {
-                actionQueue.push(DOWN);
-            }
-            frameCount = 0;
+
+        if(!selfLearning){
+            autoStepGame(scoreGrid);
+        }else {
+            int heldShape = playfield.hasHeldShape() ? playfield.getHeldShape()->shapeChoice : -1;
+            int nextShape = playfield.getNextShape()->shapeChoice;
+            int currentShape = playfield.getCurentShape()->shapeChoice;
+            std::string message = externalControl::createMessage(playfield, currentShape, heldShape, nextShape);
+            externalControl::sendMessage(message);
         }
     }
-     //Scorecard::ClearFlashScores();
-    savedScores = Scorecard::readFromFlash();
-    // scoreGrid.addScore(15);
-    if (scoreGrid.getScore() > Scorecard::getLowestScore(savedScores))
-    {
-        setInitials(matrix, driver);
-        Scorecard newCard(initials, scoreGrid.getScore());
-        Scorecard::insertScore(savedScores, newCard);
-        Scorecard::saveToFlash(savedScores);
+
+    bool waitForNextGame = true;
+    if(selfLearning){
+        externalControl::sendMessage("GAME_OVER")
+    
+    else {
+        //Scorecard::ClearFlashScores();
+        savedScores = Scorecard::readFromFlash();
+        // scoreGrid.addScore(15);
+        if (scoreGrid.getScore() > Scorecard::getLowestScore(savedScores))
+        {
+            setInitials(matrix, driver);
+            Scorecard newCard(initials, scoreGrid.getScore());
+            Scorecard::insertScore(savedScores, newCard);
+            Scorecard::saveToFlash(savedScores);
+        }
+        savedScores = Scorecard::readFromFlash();
+
     }
-    savedScores = Scorecard::readFromFlash();
-    bool showScores = true;
-    while (showScores)
+
+    while (waitForNextGame)
     {
-        showScoreCards(matrix, driver, savedScores);
+        if(!selfLearning){
+            showScoreCards(matrix, driver, savedScores);
+        }
+
         if (!actionQueue.empty())
         {
             actionQueue.pop();
             resetGame(playfield);
             scoresLoaded = false;
             scoreGrid.resetScore();
-            showScores = false;
+            waitForNextGame = false;
         }
     }
 }
@@ -542,13 +598,13 @@ void initButtons()
 {
 
     upButton.onPress([]()
-                     { actionQueue.push(UP); });
+                    { actionQueue.push(UP); });
     leftButton.onPress([]()
-                       { actionQueue.push(LEFT); });
+                    { actionQueue.push(LEFT); });
     downButton.onPress([]()
-                       { actionQueue.push(DOWN); });
+                    { actionQueue.push(DOWN); });
     rightButton.onPress([]()
-                        { actionQueue.push(RIGHT); });
+                    { actionQueue.push(RIGHT); });
     aButton.onPress([]()
                     { actionQueue.push(A); });
     bButton.onPress([]()
@@ -558,10 +614,13 @@ void initButtons()
 int main()
 {
     charlieplexDriver driver;
-    // uartInit();
-    setCoreSpeed();
-    // testPatterns(driver);
-    initButtons();
+    if (selfLearning) {
+        uartInit();
+    }else {
+        setCoreSpeed();
+        // testPatterns(driver);
+        initButtons();
+    }
 
     Shape tetromino;
     Playfield playfield(&tetromino);
