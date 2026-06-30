@@ -18,11 +18,17 @@ bool playing = true;
 
 #define UART_ID uart0
 #define BAUD_RATE 115200
+#define DATA_BITS 8
+#define STOP_BITS 1
 
 #define UART_TX_PIN 0
 #define UART_RX_PIN 1
 
 static std::queue<Action> actionQueue;
+// Buffer for storing the incoming message
+char messageBuffer[128];
+int messageIndex = 0;
+
 std::array<char, 3> initials;
 std::array<Scorecard, 3> savedScores = {
     Scorecard({'A', 'A', 'A'}, 0),
@@ -36,6 +42,26 @@ Button rightButton(27);
 Button aButton(28);
 Button bButton(29);
 
+void on_uart_rx() {
+    while (uart_is_readable(UART_ID)) {
+        char ch = uart_getc(UART_ID);
+        
+        // Example: Assume a newline '\n' marks the end of a message
+        if (ch == '\n' || ch == '\r') {
+            messageBuffer[messageIndex] = '\0'; // Null-terminate
+            //push action
+            actionQueue.push(externalControl::decodeAction(std::string(messageBuffer)));
+
+            messageIndex = 0; // Reset for the next message
+        } else {
+            if (messageIndex < sizeof(messageBuffer) - 1) {
+                messageBuffer[messageIndex++] = ch;
+            }
+        }
+    }
+}
+
+
 void uartInit()
 {
     gpio_set_function(UART_TX_PIN, UART_FUNCSEL_NUM(UART_ID, UART_TX_PIN));
@@ -43,30 +69,29 @@ void uartInit()
     uart_init(UART_ID, BAUD_RATE);
 
     if(selfLearning){
-        // //the next bit of setup is taken from uart_advanced.c demo code
+        //the next bit of setup is taken from uart_advanced.c demo code
 
-        // // Set UART flow control CTS/RTS, we don't want these, so turn them off
-        // uart_set_hw_flow(UART_ID, false, false);
+        // Set UART flow control CTS/RTS, we don't want these, so turn them off
+        uart_set_hw_flow(UART_ID, false, false);
 
-        // // Set our data format
-        // uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
+        // Set our data format
+        uart_set_format(UART_ID, DATA_BITS, STOP_BITS, UART_PARITY_NONE);
 
-        // // Turn off FIFO's - we want to do this character by character
-        // uart_set_fifo_enabled(UART_ID, false);
+        // 5. Turn on FIFO (required for hardware to buffer properly)
+        uart_set_fifo_enabled(UART_ID, true);
+        // Set up a RX interrupt
+        // We need to set up the handler first
+        // Select correct interrupt for the UART we are using
+        int UART_IRQ = UART_ID == uart0 ? UART0_IRQ : UART1_IRQ;
+        //TODO:Write interrupt handler
+        // And set up and enable the interrupt handlers
+        irq_set_exclusive_handler(UART_IRQ, on_uart_rx);
+        irq_set_enabled(UART_IRQ, true);
 
-        // // Set up a RX interrupt
-        // // We need to set up the handler first
-        // // Select correct interrupt for the UART we are using
-        // int UART_IRQ = UART_ID == uart0 ? UART0_IRQ : UART1_IRQ;
-        // //TODO:Write interrupt handler
-        // // And set up and enable the interrupt handlers
-        // irq_set_exclusive_handler(UART_IRQ, on_uart_rx);
-        // irq_set_enabled(UART_IRQ, true);
+        // Now enable the UART to send interrupts - RX only
+        uart_set_irq_enables(UART_ID, true, false);
 
-        // // Now enable the UART to send interrupts - RX only
-        // uart_set_irq_enables(UART_ID, true, false);
-
-        // //now we should be able to use uart_puts(UART_ID, message) to communicate with the PI
+        //now we should be able to use uart_puts(UART_ID, message) to communicate with the PI
     }
 }
 
